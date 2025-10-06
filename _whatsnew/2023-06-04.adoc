@@ -1,0 +1,15 @@
+= Startzeit des Wartungsfensters
+:allow-uri-read: 
+
+
+
+
+=== Startzeit des Wartungsfensters
+
+Wannlink:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment["Schaffung einer Arbeitsumgebung"] können Sie die Startzeit für das wöchentliche 30-minütige Wartungsfenster angeben, um sicherzustellen, dass die Wartung nicht mit kritischen Geschäftsaktivitäten kollidiert.
+
+
+
+=== Verteilen Sie Volumendaten mit FlexGroups
+
+Beim Erstellen eines Volumes können Sie die Datenoptimierung aktivieren, indem Sie eine FlexGroup erstellen, um Daten auf die Volumes zu verteilen.

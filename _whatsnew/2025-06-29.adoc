@@ -1,0 +1,11 @@
+= Aktualisierung der Anmeldeinformationen
+:allow-uri-read: 
+
+
+
+
+=== Aktualisierung der Anmeldeinformationen
+
+Nachdem Sie Anmeldeinformationen und Berechtigungen für Ihr FSx for ONTAP -Dateisystem eingerichtet haben, werden Sie zur Seite „Anmeldeinformationen“ von BlueXP weitergeleitet.  Auf dieser Seite können Sie Ihre FSx for ONTAP -Anmeldeinformationen umbenennen oder entfernen.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Einrichten von Berechtigungen für FSx for ONTAP -Dateisysteme"]

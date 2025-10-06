@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: use/task-monitor-operations.html 
+keywords: monitor jobs, track jobs, monitor, track, NetApp Console, bluexp 
+summary: Verfolgen Sie FSx für ONTAP -Vorgänge und überwachen Sie den Betriebsfortschritt mit Tracker in der NetApp Konsole. 
+---
+= Überwachen Sie FSx für ONTAP -Vorgänge mit Tracker in der NetApp Konsole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Überwachen und verfolgen Sie die Ausführung von FSx für ONTAP -Vorgänge und überwachen Sie den Jobfortschritt mit Tracker in der NetApp Konsole.
+
+.Informationen zu diesem Vorgang
+NetApp Console bietet Tracker, eine Funktion zur Jobüberwachung, sodass Sie den Fortschritt und Status von Anmeldeinformationen, FSx für ONTAP und Linkvorgängen überwachen und verfolgen, Details zu Vorgangsaufgaben und Unteraufgaben überprüfen und etwaige Probleme oder Fehler diagnostizieren können.
+
+Im Tracker sind mehrere Aktionen verfügbar.  Sie können Jobs nach Zeitrahmen (letzte 24 Stunden, 7 Tage, 14 Tage oder 30 Tage), Arbeitslast, Status und Benutzer filtern, Jobs mithilfe der Suchfunktion finden und die Jobtabelle als CSV-Datei herunterladen.  Sie können Tracker jederzeit aktualisieren.  Und Sie können einen fehlgeschlagenen Vorgang schnell wiederholen oder die Parameter für einen fehlgeschlagenen Vorgang bearbeiten und den Vorgang erneut versuchen.
+
+Tracker unterstützt je nach Vorgang zwei Überwachungsebenen.  Für jede Aufgabe, beispielsweise die Bereitstellung eines Dateisystems, werden die Aufgabenbeschreibung, der Status, die Startzeit, die Aufgabendauer, der Benutzer, die Region, die Proxy-Ressource, die Aufgaben-ID und alle zugehörigen Unteraufgaben angezeigt.  Sie können API-Antworten anzeigen, um zu verstehen, was während des Vorgangs passiert ist.
+
+Tracker-Aufgabenebenen mit Beispielen::
++
+--
+* Ebene 1 (übergeordnete Aufgabe): Verfolgt die Bereitstellung des Dateisystems.
+* Ebene 2 (Unteraufgabe): Verfolgt die Unteraufgaben im Zusammenhang mit der Bereitstellung des Dateisystems.
+
+
+--
+Betriebsstatus:: Der Vorgangsstatus im Tracker lautet: _in Bearbeitung_, _erfolgreich_ und _fehlgeschlagen_.
+Betriebsfrequenz:: Die Häufigkeit der Vorgänge hängt vom Aufgabentyp und Zeitplan ab.
+Ereignisaufbewahrung:: Ereignisse werden 30 Tage lang in der Benutzeroberfläche gespeichert.
+
+
+
+
+== Verfolgen und Überwachen von Vorgängen
+
+Verfolgen und überwachen Sie Vorgänge in der NetApp -Konsole mit Tracker.
+
+.Schritte
+. Wählen Sie im NetApp -Konsolenmenü *Workloads* und dann *Administration* aus.
+. Wählen Sie im Administrationsmenü *Tracker* aus.
+. Zeigen Sie in Tracker Aufgaben an oder verwenden Sie die Filter bzw. die Suche, um die Ergebnisse einzugrenzen.  Sie können auch einen Bericht aller Vorgänge herunterladen, indem Sie *CSV exportieren* auswählen.
+
+
+
+
+== API-Anforderung anzeigen
+
+Zeigen Sie die API-Anforderung in der Codebox für eine Aufgabe im Tracker an.
+
+.Schritte
+. Wählen Sie im Tracker eine Aufgabe aus.
+. Wählen Sie das Drei-Punkte-Menü und dann *API-Anfrage anzeigen*.
+
+
+
+
+== Wiederholen Sie einen fehlgeschlagenen Vorgang
+
+Wiederholen Sie einen fehlgeschlagenen Vorgang in Tracker.  Durch die Wiederholung des fehlgeschlagenen Vorgangs wird eine neue Aufgabe gestartet, die Sie in Tracker überwachen können.
+
+Sie können auch die Fehlermeldung einer fehlgeschlagenen Operation kopieren.
+
+
+NOTE: Sie können den fehlgeschlagenen Vorgang nur einmal wiederholen.
+
+.Schritte
+. Wählen Sie im Tracker einen fehlgeschlagenen Vorgang aus.
+. Wählen Sie das Drei-Punkte-Menü und dann *Wiederholen*.
+
+
+.Ergebnis
+Der Vorgang wird erneut gestartet und erscheint als neue Aufgabe im Tracker.
+
+
+
+== Bearbeiten und erneutes Ausführen eines fehlgeschlagenen Vorgangs
+
+Bearbeiten Sie die Parameter des fehlgeschlagenen Vorgangs und versuchen Sie den Vorgang außerhalb von Tracker erneut.
+
+.Schritte
+. Wählen Sie im Tracker einen fehlgeschlagenen Vorgang aus.
+. Wählen Sie das Drei-Punkte-Menü und dann *Bearbeiten und erneut versuchen*.
++
+Sie werden auf die Vorgangsseite weitergeleitet, beispielsweise zur Volumeerstellung, wo Sie die Parameter bearbeiten und den Vorgang erneut versuchen können.
+
+
+
+.Ergebnis
+Der Vorgang wird erneut gestartet.  Gehen Sie zum Tracker, um den Status des Vorgangs anzuzeigen.

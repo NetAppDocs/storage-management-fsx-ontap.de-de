@@ -1,0 +1,39 @@
+= Tracker-Antwortunterstützung
+:allow-uri-read: 
+
+
+
+
+=== Tracker-Antwortunterstützung
+
+Tracker bietet jetzt API-Antworten, sodass Sie die REST-API-Ausgabe im Zusammenhang mit der Aufgabe sehen können.
+
+
+
+=== Link-Authentifizierungsunterstützung für AWS Secrets Manager
+
+Sie haben jetzt die Möglichkeit, Geheimnisse aus AWS Secrets Manager zur Authentifizierung von Links zu verwenden, sodass Sie keine in BlueXP Workloads gespeicherten Anmeldeinformationen verwenden müssen.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"]
+
+
+
+=== Implementieren Sie Best Practices für ein FSx for ONTAP -Dateisystem
+
+BlueXP Workloads bietet ein Dashboard, auf dem Sie den ordnungsgemäßen Status Ihrer Dateisystemkonfigurationen überprüfen können.  Sie können diese Analyse nutzen, um Best Practices für Ihre FSx for ONTAP -Dateisysteme zu implementieren.  Die Analyse der Dateisystemkonfiguration umfasst die folgenden Konfigurationen: SSD-Kapazitätsschwelle, geplante lokale Snapshots, geplante FSx für ONTAP -Backups, Daten-Tiering und Remote-Datenreplikation.
+
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["Erfahren Sie mehr über die gut strukturierte Analyse von Dateisystemkonfigurationen"]
+* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["Implementieren Sie Best Practices für Ihre Dateisysteme"]
+
+
+
+
+=== Gut strukturierte Benachrichtigung bei Dateisystemproblemen
+
+In der BlueXP Konsole zeigen FSx für ONTAP -Dateisysteme mit gut strukturierten Problemen jetzt eine Benachrichtigung im Canvas an, die angibt, wenn bei Dateisystemen Probleme auftreten, die behoben werden müssen.
+
+
+
+=== Aktualisierte Berechtigungsterminologie
+
+In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.

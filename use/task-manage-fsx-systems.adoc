@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: use/task-manage-fsx-systems.html 
+keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete fsx for ontap system, remove fsx for ontap system, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity, replication, classification, sync, backup, recovery, bluexp, NetApp Console 
+summary: Nachdem Sie in der NetApp Konsole ein FSx für ONTAP -System erstellt oder erkannt haben, können Sie das Dateisystem verwalten und NetApp Datendienste verwenden, die Funktionen wie Backup und Wiederherstellung bieten. 
+---
+= Verwalten eines FSx for ONTAP -Dateisystems in der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie ein FSx for ONTAP -System in der NetApp Konsole erstellt oder erkannt haben, können Sie das Dateisystem verwalten, indem Sie Volumes erstellen, Speicher-VMs verwalten, Daten schützen und das Dateisystem verwalten.  Die Konsole ermöglicht Ihnen außerdem die Nutzung von Datendiensten, die Funktionen wie Sicherung und Wiederherstellung, Datenklassifizierung, Datensynchronisierung und mehr bieten.
+
+
+
+== Verwalten eines Dateisystems mit NetApp Workloads
+
+Wenn Sie ein FSx für ONTAP -System von der NetApp Console Systems-Seite aus öffnen, werden Sie zu NetApp Workloads weitergeleitet.  Workloads ist ein intelligenter Optimierungs- und Automatisierungsdienst, der bewährte Methoden der Branche nutzt, um wichtige Workloads mit Amazon FSx for NetApp ONTAP zu entwerfen, einzurichten und zu betreiben.
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Erfahren Sie, wie Sie ein Dateisystem mit NetApp Workloads verwalten"^]
+
+
+
+== Verwalten eines Dateisystems mit ONTAP System Manager
+
+Sie können ein FSx for ONTAP -Dateisystem direkt von der Konsole aus verwalten, indem Sie die ONTAP System Manager-Schnittstelle verwenden.  Zur Verwendung des System Managers ist ein Konsolenagent erforderlich.
+
+
+
+== Verwalten eines Dateisystems mit Amazon CloudFormation
+
+Sie können FSx für ONTAP Dateisystemressourcen (Volumes, CIFS-Freigaben, Exportrichtlinien und mehr) mit Amazon CloudFormation bereitstellen und verwalten.
+
+link:https://github.com/NetApp/NetApp-CloudFormation-FSx-ONTAP-provider["GitHub-Repository des NetApp CloudFormation FSx für ONTAP -Anbieter"^]
+
+
+
+== NetApp Datendienste mit einem Dateisystem verwenden
+
+Verwenden Sie NetApp -Datendienste mit Ihren FSx for ONTAP -Dateisystemen, um Ihre Daten zu sichern und wiederherzustellen, Daten zu übertragen und zu synchronisieren, Ihre Daten zu scannen und zu klassifizieren, Daten zu replizieren und den Zugriff zu beschleunigen oder den Datenverkehr auszulagern.
+
+
+
+=== Sichern und Wiederherstellen Ihrer Daten
+
+NetApp Backup and Recovery bietet effizienten, sicheren und kostengünstigen Datenschutz für NetApp ONTAP -Daten, -Datenbanken und -virtuelle Maschinen, sowohl vor Ort als auch in der Cloud.
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Erste Schritte mit NetApp Backup und Recovery"^]
+
+
+
+=== Daten übertragen und synchronisieren
+
+NetApp Copy and Sync ist ein Cloud-Replikations- und Synchronisierungsdienst zum Übertragen von NAS-Daten zwischen lokalen und Cloud-Objektspeichern.
+
+link:https://docs.netapp.com/us-en/data-services-copy-sync/task-quick-start.html["Erste Schritte mit NetApp Copy and Sync"^]
+
+
+
+=== Scannen und klassifizieren Sie Ihre Daten
+
+Mit NetApp Data Classification können Sie Daten in der gesamten Hybrid-Multicloud Ihres Unternehmens scannen und klassifizieren.
+
+link:https://docs.netapp.com/us-en/data-services-data-classification/index.html["Erste Schritte mit der NetApp Datenklassifizierung"^]
+
+
+
+=== Daten replizieren
+
+Replizieren Sie Daten, um Backup und Notfallwiederherstellung zu unterstützen.  Die Datenreplikation zwischen einem FSx für ONTAP Dateisystem und Cloud Volumes ONTAP oder einem FSx für ONTAP -Dateisystem und einem lokalen ONTAP System kann mithilfe von NetApp Replication durchgeführt werden.  Durch Replikation können Sie Daten zwischen ONTAP Speichersystemen replizieren, um Backup und Disaster Recovery in der Cloud oder zwischen Clouds zu unterstützen.
+
+link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["Erste Schritte mit NetApp Replication"^]
+
+Die Datenreplikation zwischen zwei FSx for ONTAP -Dateisystemen ist über die NetApp Console Systems-Seite möglich.
+
+.Bevor Sie beginnen
+Beachten Sie Folgendes, bevor Sie beginnen.
+
+* Um Daten zwischen zwei FSx for ONTAP -Dateisystemen zu replizieren, müssen Sie einen Connector mit Konnektivität zum Dateisystem auswählen oder das Dateisystem eingeben, um einen Link zuzuordnen.
+* Die Replikation wird für Volumes in einem anderen Status als „Verfügbar“, „Erstellt“ oder „Falsch konfiguriert“ nicht unterstützt, und wenn die ONTAP Version nicht kompatibel ist.
+
+
+.Schritte
+. Ziehen Sie von der Seite „NetApp Console Systems“ das Quell-FSx for ONTAP -Dateisystem auf das Ziel-FSx for ONTAP -Dateisystem und wählen Sie *Replikation*.
+. Wählen Sie auf der Seite „Replikation erstellen“ die zu replizierenden Quellvolumes aus und klicken Sie dann auf *Weiter*.
+. Geben Sie unter Replikationsziel Folgendes an:
++
+.. *Zielname*: Der Zielname wurde zuvor während des Drag-and-Drop-Vorgangs im Canvas ausgewählt.
+.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.  Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
+.. *Volumename*: Der Zielvolumename wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy` .  Sie können den automatisch generierten Datenträgernamen verwenden oder einen anderen Datenträgernamen eingeben.
+.. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus. Abhängig vom ausgewählten Anwendungsfall füllt Workload Factory das Formular gemäß Best Practices mit empfohlenen Werten aus. Sie können die empfohlenen Werte akzeptieren oder beim Ausfüllen des Formulars Änderungen vornehmen.
++
+*** Migration: Überträgt Ihre Daten auf das Ziel-FSx für ONTAP -Dateisystem
+*** Hot Disaster Recovery: gewährleistet hohe Verfügbarkeit und schnelle Disaster Recovery für kritische Workloads
+*** Kalte oder Archiv-Notfallwiederherstellung:
++
+**** Cold Disaster Recovery: nutzt längere Recovery Time Objectives (RTO) und Recovery Point Objectives (RPO), um die Kosten zu senken
+**** Archiv: Repliziert Daten für die langfristige Speicherung und Compliance
+
+
+*** Sonstige
++
+Darüber hinaus bestimmt die Auswahl des Anwendungsfalls die Replikationsrichtlinie oder SnapMirror -Richtlinie (ONTAP).  Die zur Beschreibung von Replikationsrichtlinien verwendeten Begriffe stammen auslink:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9 Dokumentation"^] .
+
++
+**** Für Migration und andere Zwecke heißt die Replikationsrichtlinie _MirrorAllSnapshots_.  _MirrorAllSnapshots_ ist eine asynchrone Richtlinie zum Spiegeln aller Snapshots und des neuesten aktiven Dateisystems.
+**** Für die Notfallwiederherstellung im Hot-, Cold- oder Archivmodus heißt die Replikationsrichtlinie _MirrorAndVault_.  _MirrorAndVault_ ist eine asynchrone Vault-Richtlinie zum Spiegeln des neuesten aktiven Dateisystems und täglicher und wöchentlicher Snapshots.
++
+Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die Standardreplikationsrichtlinie für alle Anwendungsfälle _MirrorAndVault_.
+
+
+
+
+
+.. *Tiering-Richtlinie*: Wählen Sie die Tiering-Richtlinie für die im Zielvolume gespeicherten Daten aus.  Die Tiering-Richtlinie entspricht standardmäßig der empfohlenen Tiering-Richtlinie für den von Ihnen ausgewählten Anwendungsfall.
++
+_Ausgeglichen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie unterlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume-Speicherkapazität"^] in der AWS FSx für NetApp ONTAP -Dokumentation. Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx für ONTAP -Tiering-Richtliniennamen in Klammern einschließt.
+
++
+Wenn Sie den Migrationsanwendungsfall ausgewählt haben, wählt Workload Factory automatisch aus, dass die Tiering-Richtlinie des Quellvolumes auf das Zielvolume kopiert werden soll. Sie können die Option zum Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die für das für die Replikation ausgewählte Volume gilt.
+
+.. *Maximale Übertragungsrate*: Wählen Sie *Begrenzt* und geben Sie das maximale Übertragungslimit in MB/s ein.  Alternativ können Sie *Unbegrenzt* auswählen.
++
+Ohne Begrenzung kann die Netzwerk- und Anwendungsleistung nachlassen.  Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für FSx for ONTAP -Dateisysteme für kritische Workloads, beispielsweise solche, die hauptsächlich für die Notfallwiederherstellung verwendet werden.
+
+
+
+. Geben Sie unter „Replikationseinstellungen“ Folgendes an:
++
+.. *Replikationsintervall*: Wählen Sie die Häufigkeit aus, mit der Snapshots vom Quellvolume auf das Zielvolume übertragen werden.
+.. *Langzeitaufbewahrung*: Aktivieren Sie optional Snapshots für die Langzeitaufbewahrung.  Durch die langfristige Aufbewahrung können Geschäftsdienste auch bei einem vollständigen Site-Ausfall weiter ausgeführt werden, und Anwendungen können mithilfe einer sekundären Kopie transparent ausfallen.
++
+Replikationen ohne langfristige Aufbewahrung verwenden die Richtlinie _MirrorAllSnapshots_.  Durch die Aktivierung der langfristigen Aufbewahrung wird der Replikation die Richtlinie _MirrorAndVault_ zugewiesen.
+
++
+Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die aufzubewahrende Anzahl zu definieren.
+
++
+
+NOTE: Für eine langfristige Aufbewahrung sind übereinstimmende Quell- und Zielbezeichnungen erforderlich.  Auf Wunsch kann Workload Factory fehlende Labels für Sie erstellen.
+
++
+*** *Wählen Sie eine vorhandene Richtlinie*: Wählen Sie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+*** *Neue Richtlinie erstellen*: Geben Sie einen *Richtliniennamen* ein.
+
+
+.. *Unveränderliche Snapshots*: Optional.  Wählen Sie *Unveränderliche Snapshots aktivieren* aus, um zu verhindern, dass in dieser Richtlinie erstellte Snapshots während der Aufbewahrungsfrist gelöscht werden.
++
+*** Legen Sie die *Aufbewahrungsdauer* in Stunden, Tagen, Monaten oder Jahren fest.
+*** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Häufigkeit der Snapshot-Richtlinie und die Anzahl der aufzubewahrenden Kopien aus.  Sie können mehr als eine Snapshot-Richtlinie auswählen.
+
+
+
+
+
+
+. Wählen Sie *Erstellen*.
+
+
+
+
+=== Beschleunigen Sie den Zugriff oder entlasten Sie den Datenverkehr
+
+NetApp Volume Caching bietet ein dauerhaftes, beschreibbares Volume an einem Remote-Standort.  Sie können Volume-Caching verwenden, um den Zugriff auf Daten zu beschleunigen oder den Datenverkehr von stark beanspruchten Volumes zu entlasten.
+
+link:https://docs.netapp.com/us-en/console-volume-caching/get-started/cache-intro.html["Erste Schritte mit NetApp Volume Caching"^]

@@ -1,0 +1,15 @@
+= Hinzufügen einer Speicher-VM
+:allow-uri-read: 
+
+
+
+
+=== Hinzufügen einer Speicher-VM
+
+Sie können jetzt mit BlueXP eine Speicher-VM zum Amazon FSx for NetApp ONTAP Dateisystem hinzufügen.
+
+
+
+=== Die Registerkarte **Meine Möglichkeiten** heißt jetzt **Mein Nachlass**
+
+Die Registerkarte **Meine Möglichkeiten** heißt jetzt **Mein Nachlass**.  Die Dokumentation wird aktualisiert, um den neuen Namen widerzuspiegeln.

@@ -1,0 +1,46 @@
+---
+settings:
+  name: Amazon FSx for NetApp ONTAP
+  internal:
+    pdf_enabled: true
+    lipi_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: de-de,us-en,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: Amazon FSx for NetApp ONTAP -Dokumente
+    url: "/index.html"
+  - title: Versionshinweise
+    url: "/whats-new.html"
+  - title: Erste Schritte
+    entries:
+    - title: Erfahren Sie mehr über Amazon FSx for NetApp ONTAP
+      url: "/start/concept-fsx-aws.html"
+    - title: Schnellstart
+      url: "/start/task-getting-started-fsx.html"
+    - title: Einrichten von Berechtigungen
+      url: "/requirements/task-setting-up-permissions-fsx.html"
+    - title: Erstellen oder ermitteln Sie ein FSx for ONTAP Dateisystem
+      url: "/use/task-create-fsx-system.html"
+  - title: Verwalten eines FSx for ONTAP -Dateisystems
+    url: "/use/task-manage-fsx-systems.html"
+  - title: Überwachen Sie Vorgänge mit Tracker
+    url: "/use/task-monitor-operations.html"
+  - title: Entfernen eines Dateisystems aus einem Projekt
+    url: "/use/task-remove-filesystem.html"
+  - title: Löschen eines FSx for ONTAP -Dateisystems
+    url: "/use/task-delete-fsx-system.html"
+  - title: Wissen und Unterstützung
+    entries:
+    - title: Für Support registrieren
+      url: "/support/task-support-registration.html"
+    - title: Hilfe erhalten
+      url: "/support/task-get-help.html"
+  - title: Rechtliche Hinweise
+    url: "/legal-notices.html"
+product-family:
+  name: Storage Management
+  repo: storage-management-family
