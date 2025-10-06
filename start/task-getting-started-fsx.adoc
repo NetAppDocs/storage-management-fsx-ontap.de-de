@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: start/task-getting-started-fsx.html 
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, vpc, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, netapp console, get started, permissions, policy, iam policy, policies, attach, iam user, access key, secret key, keys, sign up, cloud manager, create, bluexp 
-summary: Beginnen Sie mit Amazon FSx for NetApp ONTAP in der NetApp -Konsole, indem Sie Anmeldeinformationen hinzufügen, einen Konsolenagenten oder -link erstellen und ein Dateisystem erstellen oder erkennen. 
+summary: Beginnen Sie mit Amazon FSx for NetApp ONTAP in der NetApp Console, indem Sie Anmeldeinformationen hinzufügen, einen Konsolenagenten oder -link erstellen und ein Dateisystem erstellen oder erkennen. 
 ---
 = Schnellstart für Amazon FSx for NetApp ONTAP
 :hardbreaks:
@@ -14,15 +14,15 @@ summary: Beginnen Sie mit Amazon FSx for NetApp ONTAP in der NetApp -Konsole, in
 
 
 [role="lead"]
-Beginnen Sie mit Amazon FSx for NetApp ONTAP in der NetApp -Konsole, indem Sie Anmeldeinformationen hinzufügen, einen Konsolenagenten oder -link erstellen und ein Dateisystem erstellen oder erkennen.
+Beginnen Sie mit Amazon FSx for NetApp ONTAP in der NetApp Console, indem Sie Anmeldeinformationen hinzufügen, einen Konsolenagenten oder -link erstellen und ein Dateisystem erstellen oder erkennen.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:../requirements/task-setting-up-permissions-fsx.html["Anmeldeinformationen und Berechtigungen hinzufügen"]
 [role="quick-margin-para"]
-Das Hinzufügen von AWS-Anmeldeinformationen ist erforderlich, um der NetApp Konsole die erforderlichen Berechtigungen zum Erstellen und Verwalten von FSx für ONTAP Dateisystemen zu erteilen.  Sie können zwischen _Nur-Lese-_ und _Lese-/Schreib-_Berechtigungen wählen.
+Das Hinzufügen von AWS-Anmeldeinformationen ist erforderlich, um der NetApp Console die erforderlichen Berechtigungen zum Erstellen und Verwalten von FSx für ONTAP Dateisystemen zu erteilen.  Sie können zwischen _Nur-Lese-_ und _Lese-/Schreib-_Berechtigungen wählen.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Optional: Erstellen Sie einen Konsolenagenten oder einen Link
 [role="quick-margin-para"]
-Um einige Verwaltungsaufgaben über die NetApp Konsole auszuführen, benötigen Sie entweder einen Konsolenagenten oder einen NetApp Workloads-Link.  Ein _Konsolenagent_ ist eine virtuelle Maschine, die Sie in Ihrer VPC bereitstellen, um Ihre FSx for ONTAP Dateisysteme zu verwalten.  Ein _Link_ nutzt AWS Lambda, um eine Vertrauensbeziehung und Konnektivität zu Ihren FSx für ONTAP Dateisystemen herzustellen.
+Um einige Verwaltungsaufgaben über die NetApp Console auszuführen, benötigen Sie entweder einen Konsolenagenten oder einen NetApp Workloads-Link.  Ein _Konsolenagent_ ist eine virtuelle Maschine, die Sie in Ihrer VPC bereitstellen, um Ihre FSx for ONTAP Dateisysteme zu verwalten.  Ein _Link_ nutzt AWS Lambda, um eine Vertrauensbeziehung und Konnektivität zu Ihren FSx für ONTAP Dateisystemen herzustellen.
 
 [role="quick-margin-list"]
 * link:../start/concept-fsx-aws.html#console-agents-and-links-unlock-all-fsx-for-ontap-features["Erfahren Sie, wann ein Konsolenagent oder -link für die FSx for ONTAP -Verwaltung erforderlich ist"]
@@ -33,4 +33,4 @@ Um einige Verwaltungsaufgaben über die NetApp Konsole auszuführen, benötigen 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"] link:../use/task-create-fsx-system.html["Erstellen oder entdecken Sie ein FSx für ONTAP -System"]
 [role="quick-margin-para"]
-Erstellen Sie Ihr FSx für ONTAP -Dateisystem direkt über die NetApp Konsole oder ermitteln Sie ein Dateisystem, das Sie bereits in Ihrer AWS-Umgebung erstellt haben.
+Erstellen Sie Ihr FSx für ONTAP -Dateisystem direkt über die NetApp Console oder ermitteln Sie ein Dateisystem, das Sie bereits in Ihrer AWS-Umgebung erstellt haben.

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: use/task-monitor-operations.html 
 keywords: monitor jobs, track jobs, monitor, track, NetApp Console, bluexp 
-summary: Verfolgen Sie FSx für ONTAP -Vorgänge und überwachen Sie den Betriebsfortschritt mit Tracker in der NetApp Konsole. 
+summary: Verfolgen Sie FSx für ONTAP -Vorgänge und überwachen Sie den Betriebsfortschritt mit Tracker in der NetApp Console. 
 ---
-= Überwachen Sie FSx für ONTAP -Vorgänge mit Tracker in der NetApp Konsole
+= Überwachen Sie FSx für ONTAP -Vorgänge mit Tracker in der NetApp Console
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Überwachen und verfolgen Sie die Ausführung von FSx für ONTAP -Vorgänge und überwachen Sie den Jobfortschritt mit Tracker in der NetApp Konsole.
+Überwachen und verfolgen Sie die Ausführung von FSx für ONTAP -Vorgänge und überwachen Sie den Jobfortschritt mit Tracker in der NetApp Console.
 
 .Informationen zu diesem Vorgang
 NetApp Console bietet Tracker, eine Funktion zur Jobüberwachung, sodass Sie den Fortschritt und Status von Anmeldeinformationen, FSx für ONTAP und Linkvorgängen überwachen und verfolgen, Details zu Vorgangsaufgaben und Unteraufgaben überprüfen und etwaige Probleme oder Fehler diagnostizieren können.
@@ -37,10 +37,10 @@ Ereignisaufbewahrung:: Ereignisse werden 30 Tage lang in der Benutzeroberfläche
 
 == Verfolgen und Überwachen von Vorgängen
 
-Verfolgen und überwachen Sie Vorgänge in der NetApp -Konsole mit Tracker.
+Verfolgen und überwachen Sie Vorgänge in der NetApp Console mit Tracker.
 
 .Schritte
-. Wählen Sie im NetApp -Konsolenmenü *Workloads* und dann *Administration* aus.
+. Wählen Sie im NetApp Console *Workloads* und dann *Administration* aus.
 . Wählen Sie im Administrationsmenü *Tracker* aus.
 . Zeigen Sie in Tracker Aufgaben an oder verwenden Sie die Filter bzw. die Suche, um die Ergebnisse einzugrenzen.  Sie können auch einen Bericht aller Vorgänge herunterladen, indem Sie *CSV exportieren* auswählen.
 
@@ -85,7 +85,7 @@ Bearbeiten Sie die Parameter des fehlgeschlagenen Vorgangs und versuchen Sie den
 . Wählen Sie im Tracker einen fehlgeschlagenen Vorgang aus.
 . Wählen Sie das Drei-Punkte-Menü und dann *Bearbeiten und erneut versuchen*.
 +
-Sie werden auf die Vorgangsseite weitergeleitet, beispielsweise zur Volumeerstellung, wo Sie die Parameter bearbeiten und den Vorgang erneut versuchen können.
+Sie werden auf die Vorgangsseite weitergeleitet, beispielsweise zur Volumeerstellung, wo Sie die Parameter bearbeiten und den Vorgang wiederholen können.
 
 
 
