@@ -14,7 +14,7 @@ Tracker bietet jetzt API-Antworten, sodass Sie die REST-API-Ausgabe im Zusammenh
 
 Sie haben jetzt die Möglichkeit, Geheimnisse aus AWS Secrets Manager zur Authentifizierung von Links zu verwenden, sodass Sie keine in BlueXP Workloads gespeicherten Anmeldeinformationen verwenden müssen.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"^]
 
 
 
@@ -22,8 +22,8 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen 
 
 BlueXP Workloads bietet ein Dashboard, auf dem Sie den ordnungsgemäßen Status Ihrer Dateisystemkonfigurationen überprüfen können.  Sie können diese Analyse nutzen, um Best Practices für Ihre FSx for ONTAP -Dateisysteme zu implementieren.  Die Analyse der Dateisystemkonfiguration umfasst die folgenden Konfigurationen: SSD-Kapazitätsschwelle, geplante lokale Snapshots, geplante FSx für ONTAP -Backups, Daten-Tiering und Remote-Datenreplikation.
 
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["Erfahren Sie mehr über die gut strukturierte Analyse von Dateisystemkonfigurationen"]
-* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["Implementieren Sie Best Practices für Ihre Dateisysteme"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["Erfahren Sie mehr über die gut strukturierte Analyse von Dateisystemkonfigurationen"^]
+* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["Implementieren Sie Best Practices für Ihre Dateisysteme"^]
 
 
 
