@@ -72,21 +72,21 @@ link:https://docs.netapp.com/us-en/data-services-data-classification/index.html[
 
 === Daten replizieren
 
-Replizieren Sie Daten, um Backup und Notfallwiederherstellung zu unterstützen.  Die Datenreplikation zwischen einem FSx for ONTAP -Dateisystem und Cloud Volumes ONTAP oder einem FSx for ONTAP -Dateisystem und einem lokalen ONTAP System kann mithilfe von NetApp Replication durchgeführt werden.  Durch Replikation können Sie Daten zwischen ONTAP Speichersystemen replizieren, um Backup und Disaster Recovery in der Cloud oder zwischen Clouds zu unterstützen.
+Replizieren Sie Daten, um Backup und Notfallwiederherstellung zu unterstützen. Die Datenreplikation zwischen einem FSx for ONTAP Dateisystem und Cloud Volumes ONTAP kann mit NetApp Replication realisiert werden. Durch Replikation können Sie Daten zwischen ONTAP Speichersystemen replizieren, um Backup und Disaster Recovery in der Cloud oder zwischen Clouds zu unterstützen.
 
 link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["Erste Schritte mit NetApp Replication"^]
 
-Die Datenreplikation zwischen zwei FSx for ONTAP -Dateisystemen ist über die NetApp Console Systems-Seite möglich.
+Die Datenreplikation zwischen zwei FSx for ONTAP -Dateisystemen und zwischen einem lokalen ONTAP System und einem FSx for ONTAP Dateisystem ist über die NetApp Console -Systemseite möglich.
 
 .Bevor Sie beginnen
 Beachten Sie Folgendes, bevor Sie beginnen.
 
-* Um Daten zwischen zwei FSx for ONTAP -Dateisystemen zu replizieren, müssen Sie einen Connector mit Konnektivität zum Dateisystem auswählen oder das Dateisystem eingeben, um einen Link zuzuordnen.
+* Um Daten zwischen zwei FSx for ONTAP -Dateisystemen oder zwischen einem lokalen ONTAP -System und einem FSx for ONTAP Dateisystem zu replizieren, müssen Sie einen Konsolenagenten mit Verbindung zum Dateisystem auswählen oder das Dateisystem eingeben, um eine Verknüpfung herzustellen.
 * Die Replikation wird für Volumes in einem anderen Status als „Verfügbar“, „Erstellt“ oder „Falsch konfiguriert“ nicht unterstützt, und wenn die ONTAP Version nicht kompatibel ist.
 
 
 .Schritte
-. Ziehen Sie von der Seite „NetApp Console Systems“ das Quell-FSx for ONTAP -Dateisystem auf das Ziel-FSx for ONTAP -Dateisystem und wählen Sie *Replikation*.
+. Ziehen Sie auf der NetApp Console Systems-Seite das Quell-FSx for ONTAP -Dateisystem oder das lokale ONTAP System auf das Ziel-FSx for ONTAP -Dateisystem und wählen Sie *Replikation* aus.
 . Wählen Sie auf der Seite „Replikation erstellen“ die zu replizierenden Quellvolumes aus und klicken Sie dann auf *Weiter*.
 . Geben Sie unter Replikationsziel Folgendes an:
 +

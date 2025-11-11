@@ -14,7 +14,7 @@ summary: Um eine FSx für ONTAP Arbeitsumgebung zu erstellen oder zu verwalten, 
 
 
 [role="lead"]
-Um eine FSx für ONTAP Arbeitsumgebung zu erstellen oder zu verwalten, müssen Sie AWS-Anmeldeinformationen in der NetApp Console hinzufügen, indem Sie die ARN einer IAM-Rolle angeben, die die erforderlichen Berechtigungen zum Erstellen eines FSx für ONTAP -Systems über die NetApp Console erteilt.
+Um ein FSx for ONTAP Dateisystem zu erstellen oder zu verwalten, müssen Sie AWS-Anmeldeinformationen in der NetApp Console hinzufügen, indem Sie den ARN einer IAM-Rolle angeben, die die erforderlichen Berechtigungen zum Erstellen eines FSx for ONTAP -Systems von der NetApp Console aus gewährt.
 
 
 
@@ -30,7 +30,7 @@ Die Workload Factory-Schnittstelle bietet FSx für ONTAP Benutzern Optionen zum 
 
 == Informationen zu diesem Vorgang
 
-Wenn Sie neue Anmeldeinformationen für FSx for ONTAP aus dem Speicher in Workload Factory hinzufügen, müssen Sie entscheiden, in welcher Berechtigungsebene oder welchem ​​_Betriebsmodus_ Sie arbeiten möchten. Um AWS-Ressourcen wie FSx for ONTAP Dateisysteme zu erkennen und bereitzustellen, benötigen Sie _schreibgeschützte_ oder _Lese-/Schreibberechtigungen_.  FSx für ONTAP wird im _Basismodus_ ausgeführt, sofern Sie nicht den _Nur-Lese-Modus_ oder den _Lese-/Schreib-Modus_ auswählen.  _Nur-Lesen_ sind dasselbe wie Anzeigeberechtigungen.  _Lesen/Schreiben_ sind dasselbe wie Betriebsberechtigungen. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Erfahren Sie mehr über Betriebsmodi"] .
+Beim Hinzufügen neuer Anmeldeinformationen für FSx for ONTAP aus dem Speicher in Workload Factory müssen Sie entscheiden, welche Berechtigungsrichtlinien Sie erteilen möchten.  Um AWS-Ressourcen wie FSx for ONTAP Dateisysteme zu ermitteln, benötigen Sie die Berechtigungen _view, planning und analysis_.  Für die Bereitstellung von FSx für ONTAP Dateisysteme benötigen Sie Berechtigungen zum Erstellen und Löschen von Dateisystemen.  Grundlegende Operationen für FSx für ONTAP können ohne Berechtigungen durchgeführt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Erfahren Sie mehr über Berechtigungen"].
 
 Neue und vorhandene AWS-Anmeldeinformationen können im Administrationsmenü auf der Seite *Anmeldeinformationen* angezeigt werden.
 
@@ -81,100 +81,9 @@ In diesem Abschnitt wählen Sie die Speicherkapazität aus, die als Teil dieser 
 +
 Sie können später zusätzliche Funktionen hinzufügen. Wählen Sie einfach die Workloads aus, die Sie aktuell bereitstellen und verwalten möchten.
 
-. Wählen Sie für Workload-Funktionen, die eine Auswahl an Berechtigungsstufen bieten (Nur Lesen oder Lesen/Schreiben), die Art der Berechtigung aus, die mit diesen Anmeldeinformationen verfügbar sein soll. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Erfahren Sie mehr über die Berechtigungen, auch Betriebsmodi genannt"^] .
+. Wählen Sie für diejenigen Workload-Funktionen, die eine Auswahl an Berechtigungsrichtlinien bieten, die Art der Berechtigungen aus, die mit diesen Anmeldeinformationen verfügbar sein sollen. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Erfahren Sie mehr über die Berechtigungen."^].
 . Optional: Wählen Sie *Automatische Berechtigungsprüfung aktivieren*, um zu überprüfen, ob Sie über die erforderlichen AWS-Kontoberechtigungen zum Abschließen von Workload-Vorgängen verfügen.  Durch Aktivieren der Prüfung wird die `iam:SimulatePrincipalPolicy permission` Ihren Berechtigungsrichtlinien.  Der Zweck dieser Berechtigung besteht ausschließlich darin, Berechtigungen zu bestätigen.  Sie können die Berechtigung nach dem Hinzufügen der Anmeldeinformationen entfernen. Wir empfehlen jedoch, sie beizubehalten, um die Erstellung von Ressourcen für teilweise erfolgreiche Vorgänge zu verhindern und Ihnen die erforderliche manuelle Ressourcenbereinigung zu ersparen.
 . Kopieren Sie im Codebox-Fenster die Berechtigungen für die erste IAM-Richtlinie.
-+
-Die Speicherberechtigungen können auch aus den folgenden Registerkarten kopiert werden.
-
-+
-[role="tabbed-block"]
-====
-.Nur-Lese-Berechtigungen
---
-[source, json]
-----
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "fsx:Describe*",
-        "fsx:ListTagsForResource",
-        "ec2:Describe*",
-        "kms:Describe*",
-        "elasticfilesystem:Describe*",
-        "kms:List*",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-----
---
-.Lese-/Schreibberechtigungen
---
-[source, json]
-----
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "fsx:*",
-        "ec2:Describe*",
-        "ec2:CreateTags",
-        "ec2:CreateSecurityGroup",
-        "iam:CreateServiceLinkedRole",
-        "kms:Describe*",
-        "elasticfilesystem:Describe*",
-        "kms:List*",
-        "kms:CreateGrant",
-        "cloudwatch:PutMetricData",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ec2:AuthorizeSecurityGroupEgress",
-        "ec2:AuthorizeSecurityGroupIngress",
-        "ec2:RevokeSecurityGroupEgress",
-        "ec2:RevokeSecurityGroupIngress",
-        "ec2:DeleteSecurityGroup"
-      ],
-      "Resource": "*",
-      "Condition": {
-        "StringLike": {
-          "ec2:ResourceTag/AppCreator": "NetappFSxWF"
-        }
-      }
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-----
---
-====
 . Öffnen Sie ein weiteres Browserfenster und melden Sie sich in der AWS-Managementkonsole bei Ihrem AWS-Konto an.
 . Öffnen Sie den IAM-Dienst und wählen Sie dann *Richtlinien* > *Richtlinie erstellen*.
 . Wählen Sie JSON als Dateityp aus, fügen Sie die in Schritt 3 kopierten Berechtigungen ein und wählen Sie *Weiter*.
