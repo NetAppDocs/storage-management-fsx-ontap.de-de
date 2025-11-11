@@ -6,6 +6,6 @@
 
 === Unterstützung für die Replikation zwischen lokalen ONTAP Systemen und FSx für ONTAP Dateisystemen
 
-Die Datenreplikation zwischen einem lokalen ONTAP -System und einem FSx for ONTAP Dateisystem ist über die NetApp Console von FSx for ONTAP aus möglich.
+Die Datenreplikation zwischen einem lokalen ONTAP -System und einem FSx for ONTAP Dateisystem ist über die NetApp Console Systems-Seite möglich.
 
 link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html#replicate-data["Daten replizieren"]
