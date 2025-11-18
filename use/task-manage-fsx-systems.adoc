@@ -28,7 +28,9 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Erfahren Sie, wie S
 
 == Verwalten eines Dateisystems mit ONTAP System Manager
 
-Sie können ein FSx for ONTAP -Dateisystem direkt von der Konsole aus verwalten, indem Sie die ONTAP System Manager-Schnittstelle verwenden.  Zur Verwendung des System Managers ist ein Konsolenagent erforderlich.
+Sie können ein FSx for ONTAP -Dateisystem direkt von der Konsole aus verwalten, indem Sie die ONTAP System Manager-Schnittstelle verwenden. Für die Nutzung von System Manager wird ein Konsolenagent oder eine AWS Lambda-Verbindung benötigt.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Erfahren Sie mehr über die Verwendung von Links"^]
 
 
 

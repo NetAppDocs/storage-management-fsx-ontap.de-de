@@ -1,0 +1,9 @@
+= System Manager verfügbar bei Verwendung eines AWS Lambda-Links
+:allow-uri-read: 
+
+
+
+
+=== System Manager verfügbar bei Verwendung eines AWS Lambda-Links
+
+Die ONTAP System Manager-Schnittstelle kann mit einer AWS Lambda-Verbindung verwendet werden, um erweiterte ONTAP Operationen durchzuführen. Dies bietet eine Alternative zur Verwendung eines Konsolenagenten mit System Manager für die direkte Verwaltung eines FSx for ONTAP -Dateisystems über die Konsole. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Erfahren Sie mehr über die Verwendung von Links für fortgeschrittene ONTAP Operationen."^]

@@ -488,7 +488,6 @@
   <block id="580649b6592437bd283b108bcef22b7d" category="inline-link">Erfahren Sie, wie Sie ein Dateisystem mit NetApp Workloads verwalten</block>
   <block id="14aa34371e663d81da2ce38739cae4bc" category="paragraph"><block ref="14aa34371e663d81da2ce38739cae4bc" category="inline-link-rx"></block></block>
   <block id="9a7d7fe4ea2506122f2a5355c685706e" category="section-title">Verwalten eines Dateisystems mit ONTAP System Manager</block>
-  <block id="af8bf7a0f182ae1d5b8be3687794ca0c" category="paragraph">Sie können ein FSx for ONTAP -Dateisystem direkt von der Konsole aus verwalten, indem Sie die ONTAP System Manager-Schnittstelle verwenden.  Zur Verwendung des System Managers ist ein Konsolenagent erforderlich.</block>
   <block id="be0bf2e3af6b03378bb493466f3c335f" category="section-title">Verwalten eines Dateisystems mit Amazon CloudFormation</block>
   <block id="e211b2db96a2f5b2b2868517a76988c8" category="paragraph">Sie können FSx für ONTAP Dateisystemressourcen (Volumes, CIFS-Freigaben, Exportrichtlinien und mehr) mit Amazon CloudFormation bereitstellen und verwalten.</block>
   <block id="12980bf72a2406244df6aef483456919" category="inline-link-macro">GitHub-Repository des NetApp CloudFormation FSx für ONTAP -Anbieter</block>
@@ -716,4 +715,11 @@
   <block id="5f72153c430537b3e27deff7329da0d0" category="list-text">Ziehen Sie auf der NetApp Console Systems-Seite das Quell-FSx for ONTAP -Dateisystem oder das lokale ONTAP System auf das Ziel-FSx for ONTAP -Dateisystem und wählen Sie *Replikation* aus.</block>
   <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">11. November 2025</block>
   <block id="1387404b18ce63590b24c55d54d3ff43" category="paragraph">Die Datenreplikation zwischen einem lokalen ONTAP -System und einem FSx for ONTAP Dateisystem ist über die NetApp Console Systems-Seite möglich.</block>
+  <block id="f3bb71c095338a2af8e23c9ae07072bf" category="doc">System Manager verfügbar bei Verwendung eines AWS Lambda-Links</block>
+  <block id="b8cda09456e64356f2c1763e3e53d0af" category="inline-link-macro">Erfahren Sie mehr über die Verwendung von Links für fortgeschrittene ONTAP Operationen.</block>
+  <block id="8a730f2606f493b8d797f6c96c460037" category="paragraph">Die ONTAP System Manager-Schnittstelle kann mit einer AWS Lambda-Verbindung verwendet werden, um erweiterte ONTAP Operationen durchzuführen. Dies bietet eine Alternative zur Verwendung eines Konsolenagenten mit System Manager für die direkte Verwaltung eines FSx for ONTAP -Dateisystems über die Konsole. <block ref="3b6bcb03237efb7ff1ce82387184b37d" category="inline-link-macro-rx"></block></block>
+  <block id="2c0d3ac197a4a5c6ec443759849c532e" category="paragraph">Sie können ein FSx for ONTAP -Dateisystem direkt von der Konsole aus verwalten, indem Sie die ONTAP System Manager-Schnittstelle verwenden. Für die Nutzung von System Manager wird ein Konsolenagent oder eine AWS Lambda-Verbindung benötigt.</block>
+  <block id="eedc611f4a0b9ac93cb166f88e46128a" category="inline-link-macro">Erfahren Sie mehr über die Verwendung von Links</block>
+  <block id="61b7909f43b8222037001004e52dc71c" category="paragraph"><block ref="61b7909f43b8222037001004e52dc71c" category="inline-link-macro-rx"></block></block>
+  <block id="b566b4df138c2254f68b7631cba29c1d" category="section-title">17. November 2025</block>
 </blocks>
