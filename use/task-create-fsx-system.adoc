@@ -238,6 +238,7 @@ Sie können ein FSx for ONTAP -Dateisystem nur einmal innerhalb eines Kontos erk
 ====
 * Wenn Sie einen unbenannten Cluster auswählen, werden Sie aufgefordert, einen Namen für den Cluster einzugeben.
 * Wenn Sie einen Cluster auswählen, der nicht über die erforderlichen Anmeldeinformationen zum Verwalten des FSx for ONTAP Dateisystems über die Konsole verfügt, werden Sie aufgefordert, Anmeldeinformationen mit den erforderlichen Berechtigungen auszuwählen.
+* Die folgenden Regionen werden für die Erkennung nicht unterstützt: China-Regionen, GovCloud (US)-Regionen, Secret Cloud und Top Secret Cloud.
 
 
 ====
