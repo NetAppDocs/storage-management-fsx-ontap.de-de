@@ -51,40 +51,42 @@ Mit der Schnellerstellung können Sie eine empfohlene Best-Practice-Konfiguratio
 . Wählen Sie im NetApp Console *Storage* und dann *Management* aus.
 . Wählen Sie auf der Seite „Systeme“ die Option „System hinzufügen“ aus.
 . Wählen Sie *Amazon Web Services* als Speicherort und dann *Neu hinzufügen* für Amazon FSx for NetApp ONTAP aus.
-. Wählen Sie auf der Seite „FSx for ONTAP -Dateisystem erstellen“ die Option „Schnell erstellen“ aus.
+. Auf der Seite "FSx für ONTAP erstellen" wählen Sie *Schnell erstellen*.
 +
 Sie können auch eine gespeicherte Konfiguration laden.
 
 . Geben Sie unter „Allgemeine Dateisystemkonfiguration“ Folgendes an:
 +
-.. *AWS-Anmeldeinformationen*: Wählen Sie aus, ob Sie AWS-Anmeldeinformationen hinzufügen oder ohne Anmeldeinformationen fortfahren möchten.  Ohne Zugangsdaten können Sie den teilweise vollständigen Code aus der Codebox kopieren und herunterladen.  Der Code kann wie eine Vorlage verwendet werden, in der Sie fehlende Informationen (z. B. Anmeldeinformationen) einfügen oder bestimmte Daten anpassen können, bevor Sie den Code ausführen.
+.. *AWS-Anmeldeinformationen*: Wählen Sie diese Option aus, um AWS-Anmeldeinformationen in Workload Factory hinzuzufügen oder ohne Anmeldeinformationen fortzufahren.
 .. *Dateisystemname*: Geben Sie einen Namen für das Dateisystem ein.
-.. *Bereitstellungstopologie*: Wählen Sie eine Bereitstellungstopologie aus.
-+
-*** Bei der Scale-Up-Topologie wird ein Dateisystem zur Datenverteilung verwendet und kann entsprechend dem Datenwachstum vergrößert werden.
-*** Bei einer Scale-Out-Topologie wird mehr als ein Dateisystem zur Datenverteilung verwendet.
-
-
-.. *HA-Paare*: Geben Sie die Anzahl der HA-Paare ein.
-+
-*** Für Scale-Up-Bereitstellungen können Sie nur ein HA-Paar haben.
-*** Für Scale-Out-Bereitstellungen können Sie zwischen zwei und zwölf HA-Paare haben.
-
-
+.. *Region & VPC*: Wählen Sie die Region und VPC für das Dateisystem aus.
 .. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.
 +
-*** Bereitstellung einer einzelnen Verfügbarkeitszone (Single-AZ): Gewährleistet die Verfügbarkeit durch Überwachung auf Hardwarefehler und automatischen Austausch von Infrastrukturkomponenten im Falle eines Fehlers.  Erreicht eine hohe Haltbarkeit durch die automatische Replikation Ihrer Daten innerhalb einer Availability Zone, um sie vor Komponentenausfällen zu schützen.
-*** Bereitstellung mehrerer Availability Zones (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Availability Zone nicht verfügbar ist.  Multi-AZ-Dateisysteme unterstützen alle Verfügbarkeits- und Haltbarkeitsfunktionen von Single-AZ-Dateisystemen.  Ein Multi-AZ-Dateisystem ist für geschäftskritische Produktions-Workloads konzipiert, die eine hohe Verfügbarkeit gemeinsam genutzter ONTAP Dateidaten erfordern und Speicher mit integrierter Replikation über Availability Zones hinweg benötigen.
+*** Bereitstellung in einer einzigen Verfügbarkeitszone (Single-AZ): Gewährleistet die Verfügbarkeit durch Überwachung auf Hardwareausfälle und automatischen Austausch von Infrastrukturkomponenten im Fehlerfall. Erreicht eine hohe Haltbarkeit durch die automatische Replikation Ihrer Daten innerhalb einer Availability Zone, um sie vor Komponentenausfällen zu schützen.
++
+Diese Konfiguration wird für Workloads mit hohem Leistungsbedarf empfohlen oder wenn die Workloads klein beginnen und schrittweise auf einen Durchsatz von 72 GB/s und 2,4 Millionen IOPS skaliert werden.
+
+*** Bereitstellung mehrerer Availability Zones (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Availability Zone nicht verfügbar ist. Ein Multi-AZ-Dateisystem ist für geschäftskritische Produktions-Workloads konzipiert, die eine hohe Verfügbarkeit gemeinsam genutzter ONTAP Dateidaten erfordern und Speicher mit integrierter Replikation über Availability Zones hinweg benötigen.
++
+Diese Konfiguration mit einem einzelnen HA-Paar wird für Workloads empfohlen, die einen Durchsatz von bis zu 6 GB/s oder 200.000 IOPS erfordern.
+
 
 
 .. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
 
 
-. Wählen Sie unter *Netzwerk und Sicherheit* im Feld *Region und VPC* die Region und VPC für das Dateisystem aus.
 . Geben Sie unter *Dateisystemdetails* Folgendes an:
 +
 .. *SSD-Speicherkapazität*: Geben Sie die Speicherkapazität ein und wählen Sie die Speicherkapazitätseinheit aus.
-.. * ONTAP -Anmeldeinformationen*: Geben Sie Ihren ONTAP -Benutzernamen und Ihr Passwort ein.
++
+*** Bei Bereitstellungen der ersten Generation kann die Kapazität nach der Erstellung des Dateisystems nicht mehr verringert werden.
+*** Bei Bereitstellungen der zweiten Generation können Sie die Kapazität nach der Erstellung des Dateisystems erhöhen.
+
+
+.. * ONTAP Zugangsdaten*: Optional.  Geben Sie Ihren ONTAP Benutzernamen und Ihr Passwort ein.  Das Passwort kann jetzt oder später festgelegt werden.
++
+Falls der von Ihnen angegebene Benutzer nicht der fsxadmin-Benutzer ist und Sie später das fsxadmin-Passwort zurücksetzen müssen, können Sie dies über die AWS-Konsole tun.
+
 .. *SMB/CIFS-Setup*: Optional.  Wenn Sie für den Zugriff auf Volumes das SMB/CIFS-Protokoll verwenden möchten, müssen Sie während der Erstellung des Dateisystems das Active Directory für die Speicher-VM konfigurieren.  Geben Sie die folgenden Details für die Speicher-VM an, die für dieses Dateisystem erstellt wird.
 +
 ... *Active Directory-Domäne zum Beitreten*: Geben Sie den vollqualifizierten Domänennamen (FQDN) für das Active Directory ein.
@@ -133,49 +135,52 @@ Sie können auch eine gespeicherte Konfiguration laden.
 +
 .. *AWS-Anmeldeinformationen*: Wählen Sie diese Option aus, um AWS-Anmeldeinformationen in Workload Factory hinzuzufügen oder ohne Anmeldeinformationen fortzufahren.
 .. *Dateisystemname*: Geben Sie einen Namen für das Dateisystem ein.
-.. *Bereitstellungstopologie*: Wählen Sie eine Bereitstellungstopologie aus.
+.. *Region & VPC*: Wählen Sie die Region und VPC für das Dateisystem aus.
+.. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp und eine Dateisystemgeneration aus.  Die Verfügbarkeit eines Dateisystems der zweiten Generation hängt von der gewählten Region ab.  Wenn die ausgewählte Region keine FSx-Dateisysteme der zweiten Generation für ONTAP unterstützt, wird der Bereitstellungstyp auf die erste Generation umgeschaltet.
 +
-*** Bei der Scale-Up-Topologie wird ein Dateisystem zur Datenverteilung verwendet und kann entsprechend dem Datenwachstum vergrößert werden.
-*** Bei einer Scale-Out-Topologie wird mehr als ein Dateisystem zur Datenverteilung verwendet.
-
-
-.. *HA-Paare*: Geben Sie die Anzahl der HA-Paare ein.
+*** Bereitstellung in einer einzigen Verfügbarkeitszone (Single-AZ): Gewährleistet die Verfügbarkeit durch Überwachung auf Hardwareausfälle und automatischen Austausch von Infrastrukturkomponenten im Fehlerfall. Erreicht eine hohe Haltbarkeit durch die automatische Replikation Ihrer Daten innerhalb einer Availability Zone, um sie vor Komponentenausfällen zu schützen.
 +
-*** Für Scale-Up-Bereitstellungen können Sie nur ein HA-Paar haben.
-*** Für Scale-Out-Bereitstellungen können Sie zwischen zwei und zwölf HA-Paare haben.
+*Dateisystemgenerierung*: Wählen Sie eine der folgenden Optionen:
 
-
-.. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.
 +
-*** Bereitstellung einer einzelnen Verfügbarkeitszone (Single-AZ): Gewährleistet die Verfügbarkeit durch Überwachung auf Hardwarefehler und automatischen Austausch von Infrastrukturkomponenten im Falle eines Fehlers.  Erreicht eine hohe Haltbarkeit durch die automatische Replikation Ihrer Daten innerhalb einer Availability Zone, um sie vor Komponentenausfällen zu schützen.
-*** Bereitstellung mehrerer Availability Zones (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Availability Zone nicht verfügbar ist.  Multi-AZ-Dateisysteme unterstützen alle Verfügbarkeits- und Haltbarkeitsfunktionen von Single-AZ-Dateisystemen.  Ein Multi-AZ-Dateisystem ist für geschäftskritische Produktions-Workloads konzipiert, die eine hohe Verfügbarkeit gemeinsam genutzter ONTAP Dateidaten erfordern und Speicher mit integrierter Replikation über Availability Zones hinweg benötigen.
+**** *Zweite Generation*: Diese Konfiguration wird für Workloads mit hohem Leistungsbedarf oder für Workloads empfohlen, die klein beginnen und schrittweise auf einen Durchsatz von 72 GB/s und 2,4 Millionen IOPS skaliert werden.
+**** *Erste Generation*: Diese Konfiguration ist ideal für Workloads, die bis zu 4 GB/s oder 160.000 IOPS erfordern.  Dateisysteme der ersten Generation können lediglich die Speicherkapazität erhöhen.
+
+
+*** Bereitstellung mehrerer Availability Zones (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Availability Zone nicht verfügbar ist. Ein Multi-AZ-Dateisystem ist für geschäftskritische Produktions-Workloads konzipiert, die eine hohe Verfügbarkeit gemeinsam genutzter ONTAP Dateidaten erfordern und Speicher mit integrierter Replikation über Availability Zones hinweg benötigen.
++
+*Dateisystemgenerierung*: Wählen Sie eine der folgenden Optionen:
+
++
+**** *Zweite Generation*: Diese Konfiguration mit einem einzelnen HA-Paar wird für Workloads empfohlen, die einen Durchsatz von bis zu 6 GB/s oder 200.000 IOPS erfordern.  In einem Multi-AZ- und Dateisystem der zweiten Generation kann die Kapazität je nach Arbeitslastanforderungen erhöht oder verringert werden.
+**** *Erste Generation*: Diese Konfiguration ist ideal für Workloads, die bis zu 4 GB/s oder 160.000 IOPS erfordern.  Dateisysteme der ersten Generation können lediglich die Speicherkapazität erhöhen.
+
+
 
 
 .. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
 
 
-. Geben Sie unter „Netzwerk und Sicherheit“ Folgendes an:
-+
-.. *Region & VPC*: Wählen Sie die Region und VPC für das Dateisystem aus.
-.. *Sicherheitsgruppe*: Erstellen oder verwenden Sie eine vorhandene Sicherheitsgruppe.
-.. *Verfügbarkeitszonen*: Wählen Sie Verfügbarkeitszonen und Subnetze aus.
-+
-*** Für Clusterkonfigurationsknoten 1: Wählen Sie eine Verfügbarkeitszone und ein Subnetz aus.
-*** Für Clusterkonfigurationsknoten 2: Wählen Sie eine Verfügbarkeitszone und ein Subnetz aus.
-
-
-.. *VPC-Routentabellen*: Wählen Sie die VPC-Routentabelle aus, um den Clientzugriff auf Volumes zu ermöglichen.
-.. *Endpunkt-IP-Adressbereich*: Wählen Sie *Floating-IP-Adressbereich außerhalb Ihrer VPC* oder *Geben Sie einen IP-Adressbereich ein* und geben Sie einen IP-Adressbereich ein.
-.. *Verschlüsselung*: Wählen Sie den Namen des Verschlüsselungsschlüssels aus der Dropdown-Liste aus.
-
-
 . Geben Sie unter Dateisystemdetails Folgendes an:
 +
 .. *SSD-Speicherkapazität*: Geben Sie die Speicherkapazität ein und wählen Sie die Speicherkapazitätseinheit aus.
-.. *Bereitgestellte IOPS*: Wählen Sie *Automatisch* oder *Vom Benutzer bereitgestellt*.
-.. *Durchsatzkapazität pro HA-Paar*: Wählen Sie die Durchsatzkapazität pro HA-Paar.
-.. * ONTAP -Anmeldeinformationen*: Geben Sie Ihren ONTAP -Benutzernamen und Ihr Passwort ein.
-.. *Anmeldeinformationen für Storage-VM*: Geben Sie Ihren Benutzernamen ein.  Das Kennwort kann spezifisch für dieses Dateisystem sein oder Sie können dasselbe Kennwort verwenden, das Sie für die ONTAP Anmeldeinformationen eingegeben haben.
++
+*** Bei Bereitstellungen der ersten Generation kann die Kapazität nach der Erstellung des Dateisystems nicht mehr verringert werden.
+*** Bei Implementierungen der zweiten Generation können Sie die Kapazität anpassen.
+
+
+.. *Durchsatzkapazität pro HA-Paar*: Wählen Sie die Durchsatzkapazität pro Anzahl der HA-Paare.  Dateisysteme der ersten Generation unterstützen nur ein HA-Paar.
+.. *Bereitgestellte IOPS*: Wählen Sie eine der folgenden Optionen:
++
+*** *Automatisch*: Bei der automatischen Einstellung werden für jedes erstellte GiB 3 IOPS hinzugefügt.
+*** *Benutzerseitig bereitgestellt*: Geben Sie für die benutzerseitige Bereitstellung den IOPS-Wert ein.
+
+
+.. * ONTAP Zugangsdaten*: Optional.  Geben Sie Ihren ONTAP Benutzernamen und Ihr Passwort ein.  Das Passwort kann jetzt oder später festgelegt werden.
++
+Falls der von Ihnen angegebene Benutzer nicht der fsxadmin-Benutzer ist und Sie später das fsxadmin-Passwort zurücksetzen müssen, können Sie dies über die AWS-Konsole tun.
+
+.. *Anmeldeinformationen für die Speicher-VM*: Optional.  Geben Sie Ihren Benutzernamen ein.  Das Passwort kann spezifisch für dieses Dateisystem sein oder Sie können dasselbe Passwort verwenden, das Sie für die ONTAP Zugangsdaten eingegeben haben.  Das Passwort kann jetzt oder später festgelegt werden.
 .. *SMB/CIFS-Setup*: Optional.  Wenn Sie für den Zugriff auf Volumes das SMB/CIFS-Protokoll verwenden möchten, müssen Sie während der Erstellung des Dateisystems das Active Directory für die Speicher-VM konfigurieren.  Geben Sie die folgenden Details für die Speicher-VM an, die für dieses Dateisystem erstellt wird.
 +
 ... *Active Directory-Domäne zum Beitreten*: Geben Sie den vollqualifizierten Domänennamen (FQDN) für das Active Directory ein.
@@ -198,21 +203,37 @@ Wenn Sie einem selbstverwalteten AD beitreten, verwenden Sie den Namen der Grupp
 
 
 
+. Geben Sie unter „Netzwerk und Sicherheit“ Folgendes an:
++
+.. *Sicherheitsgruppe*: Erstellen oder verwenden Sie eine vorhandene Sicherheitsgruppe.
++
+Informationen zu einer neuen Sicherheitsgruppe finden Sie unter<<Security group details,Details zur Sicherheitsgruppe>> Eine Beschreibung der Sicherheitsgruppenprotokolle, Ports und Rollen finden Sie hier.
+
+.. *Verfügbarkeitszonen*: Wählen Sie Verfügbarkeitszonen und Subnetze aus.
++
+*** Für Clusterkonfigurationsknoten 1: Wählen Sie eine Verfügbarkeitszone und ein Subnetz aus.
+*** Für Clusterkonfigurationsknoten 2: Wählen Sie eine Verfügbarkeitszone und ein Subnetz aus.
+
+
+.. *VPC-Routentabellen*: Wählen Sie die VPC-Routentabelle aus, um den Clientzugriff auf Volumes zu ermöglichen.
+.. *Endpunkt-IP-Adressbereich*: Wählen Sie *Floating-IP-Adressbereich außerhalb Ihrer VPC* oder *Geben Sie einen IP-Adressbereich ein* und geben Sie einen IP-Adressbereich ein.
+.. *Verschlüsselung*: Wählen Sie den Namen des Verschlüsselungsschlüssels aus der Dropdown-Liste aus.
+
+
 . Geben Sie unter „Sicherung und Wartung“ Folgendes an:
 +
 .. *FSx für ONTAP -Backup*: Tägliche automatische Backups sind standardmäßig aktiviert.  Deaktivieren Sie diese Option, falls gewünscht.
 +
 ... *Aufbewahrungszeitraum für automatische Sicherungen*: Geben Sie die Anzahl der Tage ein, für die automatische Sicherungen aufbewahrt werden sollen.
 ... *Tägliches automatisches Backup-Fenster*: Wählen Sie entweder *Keine Präferenz* (eine tägliche Backup-Startzeit wird für Sie ausgewählt) oder *Startzeit für tägliche Backups auswählen* und geben Sie eine Startzeit an.
-... *Wöchentliches Wartungsfenster*: Wählen Sie entweder *Keine Präferenz* (eine Startzeit für das wöchentliche Wartungsfenster wird für Sie ausgewählt) oder *Startzeit für 30-minütiges wöchentliches Wartungsfenster auswählen* und geben Sie eine Startzeit an.
 
 
+.. *Wöchentliches Wartungsfenster*: Wählen Sie entweder *Keine Präferenz* (eine Startzeit für das wöchentliche Wartungsfenster wird für Sie ausgewählt) oder *Startzeit für 30-minütiges wöchentliches Wartungsfenster auswählen* und geben Sie eine Startzeit an.
 
 
-. Speichern oder erstellen Sie das Dateisystem.
+. Speichern oder erstellen Sie das Dateisystem. .Ergebnis
 
 
-.Ergebnis
 Wenn Sie das Dateisystem erstellt haben, wird die neue FSx for ONTAP -Konfiguration auf der Seite „Systeme“ angezeigt.
 
 Sie können Ihre FSx for ONTAP Dateisysteme auf verschiedene Weise verwalten, z. B. über Workloads in der NetApp Console, mit ONTAP System Manager und mit AWS CloudFormation. Erfahren Sie, wie Sie link:task-manage-fsx-systems.html["Verwalten Sie ein FSx für ONTAP -Dateisystem"] .
