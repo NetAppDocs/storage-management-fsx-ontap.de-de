@@ -11,5 +11,3 @@ FSx für ONTAP Dateisystemverwaltungsaufgaben wie das Hinzufügen von Volumes, d
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html#features["Erfahren Sie mehr über die Funktionen von FSx für ONTAP in der BlueXP workload factory"^]
 
 Wenn Sie nach der Option „Erweiterte Ansicht“ suchen, mit der Sie ein FSx für ONTAP -Dateisystem mit ONTAP System Manager verwalten können, können Sie diese Option jetzt auf der BlueXP Leinwand finden, nachdem Sie die Arbeitsumgebung ausgewählt haben.
-
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-fsx-ontap/main/media/screenshot-system-manager.png["Ein Screenshot des rechten Bereichs auf dem BlueXP Canvas nach der Auswahl einer Arbeitsumgebung, in der die Option „System Manager“ angezeigt wird."]

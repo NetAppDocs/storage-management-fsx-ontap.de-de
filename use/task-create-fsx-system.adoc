@@ -51,7 +51,7 @@ Mit der Schnellerstellung können Sie eine empfohlene Best-Practice-Konfiguratio
 . Wählen Sie im NetApp Console *Storage* und dann *Management* aus.
 . Wählen Sie auf der Seite „Systeme“ die Option „System hinzufügen“ aus.
 . Wählen Sie *Amazon Web Services* als Speicherort und dann *Neu hinzufügen* für Amazon FSx for NetApp ONTAP aus.
-. Auf der Seite "FSx für ONTAP erstellen" wählen Sie *Schnell erstellen*.
+. Wählen Sie auf der Seite „FSx for ONTAP -Dateisystem erstellen“ die Option „Schnell erstellen“ aus.
 +
 Sie können auch eine gespeicherte Konfiguration laden.
 
@@ -127,7 +127,7 @@ Mit der erweiterten Erstellung legen Sie alle Konfigurationsoptionen fest, einsc
 . Wählen Sie im NetApp Console *Storage* und dann *Management* aus.
 . Wählen Sie auf der Seite „Systeme“ die Option „System hinzufügen“ aus.
 . Wählen Sie *Amazon Web Services* als Speicherort und dann *Neu hinzufügen* für Amazon FSx for NetApp ONTAP aus.
-. Wählen Sie auf der Seite „FSx for ONTAP erstellen“ die Option *Erweiterte Erstellung* aus.
+. Wählen Sie auf der Seite "FSx für ONTAP -Dateisystem erstellen" die Option "Erweiterte Erstellung" aus.
 +
 Sie können auch eine gespeicherte Konfiguration laden.
 

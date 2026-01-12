@@ -17,8 +17,6 @@
   <block id="67c7aeb67508aad4a1a5b35bdab67864" category="inline-link-macro">Erfahren Sie mehr über die Funktionen von FSx für ONTAP in der BlueXP workload factory</block>
   <block id="9043e597fd1a3537f95cd09a004d83dc" category="paragraph"><block ref="9043e597fd1a3537f95cd09a004d83dc" category="inline-link-macro-rx"></block></block>
   <block id="622ad6297367666ca450d994236cbc2d" category="paragraph">Wenn Sie nach der Option „Erweiterte Ansicht“ suchen, mit der Sie ein FSx für ONTAP -Dateisystem mit ONTAP System Manager verwalten können, können Sie diese Option jetzt auf der BlueXP Leinwand finden, nachdem Sie die Arbeitsumgebung ausgewählt haben.</block>
-  <block id="50a397404296b3dd547fbabeb18e9092" category="inline-image-macro">Ein Screenshot des rechten Bereichs auf dem BlueXP Canvas nach der Auswahl einer Arbeitsumgebung, in der die Option „System Manager“ angezeigt wird.</block>
-  <block id="66cff4f3970f46872862ee60b7f0a832" category="paragraph"><block ref="66cff4f3970f46872862ee60b7f0a832" category="inline-image-macro-rx" type="image"></block></block>
   <block id="16e305f77c7a0272aceac8c95312d98a" category="doc">NetApp veröffentlicht zusätzliche CloudFormation-Ressourcen</block>
   <block id="c043b3439543ebfc027a3c1fcb5613a5" category="paragraph">NetApp bietet jetzt CloudFormation-Ressourcen, mit denen Kunden erweiterte ONTAP Komponenten nutzen können, die nicht in der AWS-Konsole verfügbar sind.  CloudFormation ist der Infrastruktur-als-Code-Mechanismus für AWS.  Sie können Replikationsbeziehungen, CIFS-Freigaben, NFS-Exportrichtlinien, Snapshots und mehr erstellen.</block>
   <block id="01d4e72c68c36e8905e55eeb7f8aff0c" category="inline-link-macro">Verwalten Sie Amazon FSx for NetApp ONTAP -Dateisysteme mit CloudFormation</block>
@@ -176,7 +174,6 @@
   <block id="aeb31c9f8c311597856b129ab948b4e6" category="inline-link">NetApp Workload Factory</block>
   <block id="2c6d3a7f89afc9964121c1b114a56714" category="paragraph">Auf der Systemseite der NetApp Console können Sie FSx für ONTAP -Systeme erstellen und erkennen sowie System Manager und andere NetApp -Dienste verwenden.  Wenn Sie FSx für ONTAP -Systeme und Workloads verwalten möchten, die auf Amazon FSx for NetApp ONTAP ausgeführt werden, verwenden Sie<block ref="fb3b6c773a24cacae7230400ab3161da" category="inline-link-rx"></block> .</block>
   <block id="0274c25cd39fea1cd6fb3e820df70e7f" category="inline-link-macro">Erfahren Sie, wie Sie FSx für ONTAP -Systeme über die NetApp Console erstellen und erkennen</block>
-  <block id="712fd65679ed31770d0f4093b25a23ea" category="paragraph"><block ref="a984d544f502f6adfd6ad6d305bf1f18" category="inline-link-macro-rx"></block> .</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">Features</block>
   <block id="5e63cf07e8c4e2bc02fec4b907bfcc00" category="list-text">Sie müssen keine Speichergeräte, Software oder Backups konfigurieren oder verwalten.</block>
   <block id="e2ab7c65b21ed8cc1c3b642b5e36429e" category="inline-link">S3</block>
@@ -432,7 +429,6 @@
   <block id="6e4ae6aee9c2976cecc823f5d4e3d5db" category="paragraph">Sie können Ihre FSx for ONTAP Dateisysteme auf verschiedene Weise verwalten, z. B. über Workloads in der NetApp Console, mit ONTAP System Manager und mit AWS CloudFormation. Erfahren Sie, wie Sie <block ref="2dbcf252d35932131abc9de391694341" category="inline-link-macro-rx"></block> .</block>
   <block id="28cdc97b1969c0c544a77fde4457a7e5" category="open-title">Erweiterte Erstellung</block>
   <block id="6805fd9faa6a9d49c19e9f0869323fd8" category="paragraph">Mit der erweiterten Erstellung legen Sie alle Konfigurationsoptionen fest, einschließlich Verfügbarkeit, Sicherheit, Backups und Wartung.</block>
-  <block id="05d67c5923f1020ef47b7e3fb35cba6e" category="list-text">Wählen Sie auf der Seite „FSx for ONTAP erstellen“ die Option *Erweiterte Erstellung* aus.</block>
   <block id="cf8254c1af160e61f04022f6a69ab935" category="list-text">*AWS-Anmeldeinformationen*: Wählen Sie diese Option aus, um AWS-Anmeldeinformationen in Workload Factory hinzuzufügen oder ohne Anmeldeinformationen fortzufahren.</block>
   <block id="16babb73337008dc5c8f7dfa9f1a09b2" category="list-text">Geben Sie unter „Netzwerk und Sicherheit“ Folgendes an:</block>
   <block id="38ee1102173e9d9f4d6871edf96fc7fb" category="list-text">*Region &amp; VPC*: Wählen Sie die Region und VPC für das Dateisystem aus.</block>
@@ -708,7 +704,6 @@
   <block id="61b7909f43b8222037001004e52dc71c" category="paragraph"><block ref="61b7909f43b8222037001004e52dc71c" category="inline-link-macro-rx"></block></block>
   <block id="b566b4df138c2254f68b7631cba29c1d" category="section-title">17. November 2025</block>
   <block id="e581684dcb328343d1f63d6cb9035ad9" category="list-text">Die folgenden Regionen werden für die Erkennung nicht unterstützt: China-Regionen, GovCloud (US)-Regionen, Secret Cloud und Top Secret Cloud.</block>
-  <block id="4dbf3f8143817255acc3b74b3d52a1d2" category="list-text">Auf der Seite "FSx für ONTAP erstellen" wählen Sie *Schnell erstellen*.</block>
   <block id="cf5df8345ca5f203e0f805460b558155" category="list-text">Bereitstellung in einer einzigen Verfügbarkeitszone (Single-AZ): Gewährleistet die Verfügbarkeit durch Überwachung auf Hardwareausfälle und automatischen Austausch von Infrastrukturkomponenten im Fehlerfall. Erreicht eine hohe Haltbarkeit durch die automatische Replikation Ihrer Daten innerhalb einer Availability Zone, um sie vor Komponentenausfällen zu schützen.</block>
   <block id="cc7023e1e70f83f63ba0c94135b83c2d" category="paragraph">Diese Konfiguration wird für Workloads mit hohem Leistungsbedarf empfohlen oder wenn die Workloads klein beginnen und schrittweise auf einen Durchsatz von 72 GB/s und 2,4 Millionen IOPS skaliert werden.</block>
   <block id="ce920fde7af8f67cbfd1ca3e8efd6b91" category="list-text">Bereitstellung mehrerer Availability Zones (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Availability Zone nicht verfügbar ist. Ein Multi-AZ-Dateisystem ist für geschäftskritische Produktions-Workloads konzipiert, die eine hohe Verfügbarkeit gemeinsam genutzter ONTAP Dateidaten erfordern und Speicher mit integrierter Replikation über Availability Zones hinweg benötigen.</block>
@@ -731,4 +726,7 @@
   <block id="4f1bd0ace83aba374b7ff69066a53c58" category="inline-xref">Details zur Sicherheitsgruppe</block>
   <block id="e41bac724f43b475f854e3aa1664b8de" category="paragraph">Informationen zu einer neuen Sicherheitsgruppe finden Sie unter<block ref="592b894db662c6a6a8229aea3f9a37fa" category="inline-xref-macro-rx"></block> Eine Beschreibung der Sicherheitsgruppenprotokolle, Ports und Rollen finden Sie hier.</block>
   <block id="0ebb1380b6abc3243f8c020aa97f25da" category="list-text">Speichern oder erstellen Sie das Dateisystem. .Ergebnis</block>
+  <block id="2f41edd6a40030a5b9782bbc67a56e19" category="paragraph"><block ref="eee6c8a030ab87fecfce06e7212b64da" category="inline-link-macro-rx"></block>Die</block>
+  <block id="3a75f5b58f8a8c79c73ac8b3f0785afe" category="list-text">Wählen Sie auf der Seite „FSx for ONTAP -Dateisystem erstellen“ die Option „Schnell erstellen“ aus.</block>
+  <block id="6e9c833800dbc4ebe142052809560480" category="list-text">Wählen Sie auf der Seite "FSx für ONTAP -Dateisystem erstellen" die Option "Erweiterte Erstellung" aus.</block>
 </blocks>
