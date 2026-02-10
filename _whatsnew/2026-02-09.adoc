@@ -1,0 +1,11 @@
+= Unterstützung für die Replikation von Daten zwischen Cloud Volumes ONTAP und FSx for ONTAP
+:allow-uri-read: 
+
+
+
+
+=== Unterstützung für die Replikation von Daten zwischen Cloud Volumes ONTAP und FSx for ONTAP
+
+Die Datenreplikation ist jetzt zwischen einem Cloud Volumes ONTAP-System und einem FSx for ONTAP-Dateisystem über die NetApp Console verfügbar.
+
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-replicate-data.html["Daten replizieren"]
