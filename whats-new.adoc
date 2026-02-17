@@ -18,6 +18,18 @@ Erfahren Sie, was es Neues in FSx für ONTAP gibt.
 
 
 
+== 16. Februar 2026
+
+
+
+=== Unterstützung für die Migration von Storage-VMs
+
+NetApp Workload Factory unterstützt jetzt die Migration für Storage-VMs. Diese Funktion ermöglicht die Migration von ONTAP-Speichersystemdaten und -konfigurationen von lokalen ONTAP-Systemen oder FSx for ONTAP-Dateisystemen der ersten Generation auf FSx for ONTAP-Dateisysteme der zweiten Generation. Sie können Storage-VM-Daten und Konfigurationseinstellungen replizieren, um mit minimalen Ausfallzeiten und geringen Beeinträchtigungen für Benutzer und Anwendungen auf das neue Dateisystem zu migrieren.
+
+Um diese Funktion zu nutzen, link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-replicate-data.html["eine Replikationsbeziehung erstellen"] und wählen Sie *Migration* als Anwendungsfall aus. Um den Migrationsprozess abzuschließen, müssen Sie link:https://review.docs.netapp.com/us-en/workload-fsx-ontap/task/replicate-data.html#cut-over-replication-for-migration-use-cases["Schalten Sie die Storage-VM und ihre replizierten Volumes um"] sofort ausführen, um Daten und Konfigurationseinstellungen der Storage-VMs dauerhaft auf das Ziel-FSx for ONTAP-Dateisystem zu migrieren.
+
+
+
 == 09. Februar 2026
 
 
