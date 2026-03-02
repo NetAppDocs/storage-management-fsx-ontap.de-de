@@ -1,0 +1,9 @@
+= NetApp Console-Agentenstatus wird für FSx für ONTAP-Dateisysteme unterstützt
+:allow-uri-read: 
+
+
+
+
+=== NetApp Console-Agentenstatus wird für FSx für ONTAP-Dateisysteme unterstützt
+
+NetApp Console zeigt jetzt den Console-Agentenstatus für FSx for ONTAP-Dateisysteme in Workloads an. Der Status gibt an, ob der Agent läuft und mit dem FSx for ONTAP-Dateisystem kommunizieren kann. Diese Information kann Ihnen helfen, Verbindungsprobleme zu beheben.
