@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/task-manage-fsx-systems.html 
-keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete fsx for ontap system, remove fsx for ontap system, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity, replication, classification, sync, backup, recovery, bluexp, NetApp Console 
+keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete fsx for ontap system, remove fsx for ontap system, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity, replication, classification, sync, backup, recovery, NetApp Console 
 summary: Nachdem Sie in der NetApp Console ein FSx für ONTAP -System erstellt oder erkannt haben, können Sie das Dateisystem verwalten und NetApp Datendienste verwenden, die Funktionen wie Sicherung und Wiederherstellung bereitstellen. 
 ---
 = Verwalten eines FSx for ONTAP -Dateisystems in der NetApp Console
