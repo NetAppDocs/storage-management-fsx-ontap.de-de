@@ -22,7 +22,7 @@ Das Hinzufügen von AWS-Anmeldeinformationen ist erforderlich, um der NetApp Con
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Optional: Erstellen Sie einen Konsolenagenten oder einen Link
 [role="quick-margin-para"]
-Um einige Verwaltungsaufgaben über die NetApp Console auszuführen, benötigen Sie entweder einen Konsolenagenten oder einen NetApp Workloads-Link.  Ein _Konsolenagent_ ist eine virtuelle Maschine, die Sie in Ihrer VPC bereitstellen, um Ihre FSx for ONTAP Dateisysteme zu verwalten.  Ein _Link_ nutzt AWS Lambda, um eine Vertrauensbeziehung und Konnektivität zu Ihren FSx für ONTAP Dateisystemen herzustellen.
+Um einige Verwaltungsaufgaben über die NetApp Console auszuführen, benötigen Sie entweder einen Console-Agenten oder einen NetApp Workload Factory-Link. Ein Console-Agent ist eine virtuelle Maschine, die Sie in Ihrer VPC bereitstellen, um Ihre FSx for ONTAP-Dateisysteme zu verwalten. Ein Link nutzt AWS Lambda, um eine Vertrauensbeziehung und Konnektivität zu Ihren FSx for ONTAP-Dateisystemen herzustellen.
 
 [role="quick-margin-list"]
 * link:../start/concept-fsx-aws.html#console-agents-and-links-unlock-all-fsx-for-ontap-features["Erfahren Sie, wann ein Konsolenagent oder -link für die FSx for ONTAP -Verwaltung erforderlich ist"]

@@ -18,11 +18,11 @@ Nachdem Sie in der NetApp Console ein FSx for ONTAP -System erstellt oder erkann
 
 
 
-== Verwalten eines Dateisystems mit NetApp Workloads
+== Verwalten Sie ein Dateisystem mit NetApp Workload Factory
 
-Wenn Sie ein FSx for ONTAP-System von der NetApp Console Systems-Seite öffnen, gelangen Sie zu NetApp Workloads. Workloads ist ein intelligenter Optimierungs- und Automatisierungsdienst, der Best Practices der Branche nutzt, um wichtige Workloads mit Amazon FSx for NetApp ONTAP zu planen, bereitzustellen und zu betreiben.
+Wenn Sie ein FSx for ONTAP-System von der NetApp Console Systems-Seite öffnen, gelangen Sie zur NetApp Workload Factory. NetApp Workload Factory ist ein intelligenter Optimierungs- und Automatisierungsdienst, der Best Practices der Branche nutzt, um wichtige Workloads mit Amazon FSx for NetApp ONTAP zu planen, bereitzustellen und zu betreiben.
 
-https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Erfahren Sie, wie Sie ein Dateisystem mit NetApp Workloads verwalten"^]
+https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Erfahren Sie, wie Sie ein Dateisystem mit NetApp Workload Factory verwalten."^]
 
 
 
