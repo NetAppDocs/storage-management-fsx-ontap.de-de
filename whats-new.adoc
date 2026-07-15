@@ -21,7 +21,12 @@ Erfahren Sie, was es Neues in FSx für ONTAP gibt.
 [[15-july-2026]]
 == 15. Juli 2026
 
-Nicht aufgelöste Direktive in <stdin> - include::.._whatsnew/2026-07-15.adoc[]
+
+
+[[genai-workload-removal-from-workloads-in-the-netapp-console]]
+=== GenAI-Workload-Entfernung aus den Workloads in der NetApp Console
+
+Die GenAI-Workload wurde aus Workloads in der NetApp Console entfernt.
 
 
 
