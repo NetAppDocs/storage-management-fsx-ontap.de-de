@@ -17,6 +17,7 @@ Beim Replizieren von Speicher-VM-Daten und Konfigurationseinstellungen müssen S
 
 
 
+[[about-this-task]]
 == Informationen zu diesem Vorgang
 
 Die Replikation schützt Ihre Daten vor regionalen Katastrophen und unterstützt die Migration von Storage-VMs.
@@ -34,6 +35,7 @@ Sie können ein Quellvolume (lesen/schreiben) oder ein Datensicherungsvolume (DP
 ====
 
 
+[[migration-use-cases]]
 === Migrationsanwendungsfälle
 
 Für die Migration können Sie die Daten und Konfigurationseinstellungen einer Storage-VM replizieren. Wenn Sie Daten und Konfigurationseinstellungen gemeinsam migrieren, stellen Sie sicher, dass die letzte Replikation des Volumes innerhalb der letzten 24 Stunden abgeschlossen wurde. Sie müssen alle Volumes in derselben Storage-VM auswählen, um diese Funktion zu nutzen. Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
@@ -59,6 +61,7 @@ Für die Migration der Speicher-VM-Daten und Konfigurationseinstellungen müssen
 
 
 
+[[step-1-create-the-replication-relationship]]
 == Schritt 1: Replikationsbeziehung erstellen
 
 Replizieren Sie Daten zwischen zwei FSx for ONTAP-Dateisystemen, zwischen einem lokalen ONTAP-System und einem FSx for ONTAP-Dateisystem oder zwischen Cloud Volumes ONTAP und einem FSx for ONTAP-Dateisystem.
@@ -83,7 +86,13 @@ Replizieren Sie Daten zwischen zwei FSx for ONTAP-Dateisystemen, zwischen einem 
 *** Künstliche Intelligenz (KI) und maschinelles Lernen (ML): Replizieren Sie Ihre lokalen ONTAP-Daten zu FSx for ONTAP und erstellen Sie S3-Zugriffspunkte, um das Training von KI und ML in der Cloud zu unterstützen
 *** Migration: Überträgt Ihre Daten auf das Ziel-FSx für ONTAP -Dateisystem
 +
-*Replikation der Speicher-VM-Konfiguration*: Optional können Sie auswählen, die Daten und Konfigurationseinstellungen einer einzelnen Speicher-VM zu replizieren. Wenn Sie Daten und Konfigurationseinstellungen gleichzeitig migrieren, stellen Sie sicher, dass die letzte Replikation für das Volume in den letzten 24 Stunden abgeschlossen wurde. Alle Volumes in derselben Speicher-VM müssen ausgewählt werden, um diese Funktion zu nutzen. Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
+*Replikation der Speicher-VM-Konfiguration*: Optional können Sie die Replikation der Speicher-VM-Daten und -Konfigurationseinstellungen für eine einzelne Speicher-VM auswählen. Bei der Migration von Daten und Einstellungen müssen alle Volumes innerhalb der letzten 24 Stunden repliziert und anschließend gleichzeitig umgeschaltet werden.
+
++
+Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
+
++
+Während der Migration greifen Clients auf Daten des Quell-ONTAP-Dateisystems zu. Nach der Umstellung sind die Volumes über die Ziel-FSx for ONTAP-Dateisystem-IP-Adressen verfügbar. Aktualisieren Sie alle Clients oder Ressourcen, die noch die alte IP-Adresse verwenden.
 
 *** Hot Disaster Recovery: gewährleistet hohe Verfügbarkeit und schnelle Disaster Recovery für kritische Workloads
 *** Kalte oder Archiv-Notfallwiederherstellung:
@@ -107,7 +116,10 @@ Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die Sta
 
 
 .. *FSx for ONTAP file system*: Wählen Sie Anmeldeinformationen, Region und FSx for ONTAP file system name für das Ziel-FSx for ONTAP file system aus.
-.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.  Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
+.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
++
+Wenn die Namen der Quell- und Ziel-Storage-VMs identisch sind, erstellen wir einen Dateisystemalias für die Ziel-Storage-VM-Namen, um Peering-Konflikte zu vermeiden.
+
 .. *Volumename*: Der Zielvolumename wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy` .  Sie können den automatisch generierten Datenträgernamen verwenden oder einen anderen Datenträgernamen eingeben.
 .. *Tiering-Richtlinie*: Wählen Sie die Tiering-Richtlinie für die im Zielvolume gespeicherten Daten aus.  Die Tiering-Richtlinie entspricht standardmäßig der empfohlenen Tiering-Richtlinie für den von Ihnen ausgewählten Anwendungsfall.
 +
@@ -124,6 +136,10 @@ Ohne Begrenzung kann die Netzwerk- und Anwendungsleistung nachlassen.  Alternati
 
 . Geben Sie unter „Replikationseinstellungen“ Folgendes an:
 +
+.. *Replikationsbeziehung initialisieren*: Wählen Sie, ob die Replikationsbeziehung direkt nach ihrer Erstellung oder später initialisiert werden soll. Beachten Sie, dass die Initialisierung zeitaufwändig sein kann, und Sie möchten den Basistransfer möglicherweise außerhalb der Spitzenzeiten durchführen.
++
+Um die Initialisierung später manuell durchzuführen, beachten Sie die Anweisungen in <<Schritt 2: Replikationsbeziehung initialisieren,Schritt 2: Replikationsbeziehung initialisieren>>.
+
 .. *Replikationsintervall*: Wählen Sie die Häufigkeit aus, mit der Snapshots vom Quellvolume auf das Zielvolume übertragen werden.
 .. *Langzeitaufbewahrung*: Aktivieren Sie optional Snapshots für die Langzeitaufbewahrung.  Durch die langfristige Aufbewahrung können Geschäftsdienste auch bei einem vollständigen Site-Ausfall weiter ausgeführt werden, und Anwendungen können mithilfe einer sekundären Kopie transparent ausfallen.
 +
@@ -134,10 +150,10 @@ Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene R
 
 +
 
-NOTE: Für eine langfristige Aufbewahrung sind übereinstimmende Quell- und Zielbezeichnungen erforderlich.  Auf Wunsch kann Workload Factory fehlende Labels für Sie erstellen.
+NOTE: Für die Langzeitarchivierung sind übereinstimmende Quell- und Zielbezeichnungen erforderlich. Auf Wunsch kann Workload Factory fehlende Bezeichnungen für Sie erstellen.
 
 +
-*** *Wählen Sie eine vorhandene Richtlinie*: Wählen Sie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+*** *Eine bestehende Richtlinie auswählen*: Wählen Sie eine bestehende Richtlinie aus.
 *** *Neue Richtlinie erstellen*: Geben Sie einen *Richtliniennamen* ein.
 
 
@@ -171,6 +187,7 @@ Wenn Sie eine Replikationsbeziehung für Migrationszwecke erstellt haben, müsse
 
 
 
+[[step-2-initialize-the-replication-relationship]]
 == Schritt 2: Replikationsbeziehung initialisieren
 
 Initialisieren Sie eine Replikationsbeziehung zwischen Quell- und Ziel-Volume, um den Snapshot und alle Datenblöcke in NetApp Workload Factory zu übertragen.
@@ -199,12 +216,14 @@ Wenn der Replikationsstatus *Leerlauf* anzeigt, ist der Datentransfer abgeschlos
 
 
 
+[[step-3-cut-over-replication-for-migration-use-cases]]
 == Schritt 3: Umstellung der Replikation für Migrationsanwendungsfälle
 
 Nachdem die Replikationsbeziehung für einen Migrationsanwendungsfall erstellt wurde, muss die Replikation umgestellt werden, um die Migration der Storage-VM-Daten und Konfigurationseinstellungen auf das Ziel-FSx for ONTAP-Dateisystem abzuschließen. Die Umstellung der Replikation migriert Daten und Storage-VM-Konfigurationseinstellungen dauerhaft vom Quellsystem auf das Ziel-FSx for ONTAP-Dateisystem. Während der Umstellung werden die Daten ein letztes Mal repliziert. Die Quell-Storage-VM wird offline geschaltet, wenn die Umstellung beginnt.
 
 
 
+[[plan-for-the-cutover-operation]]
 === Planen Sie den Cutover-Vorgang
 
 Berücksichtigen Sie Folgendes bei der Planung des Umstellungsprozesses für Migrationsanwendungsfälle.
@@ -247,6 +266,7 @@ Berücksichtigen Sie Folgendes bei der Planung des Umstellungsprozesses für Mig
 
 
 
+[[update-configuration-settings-after-cutover]]
 === Konfigurationseinstellungen nach der Umstellung aktualisieren
 
 Nachdem Sie die Replikation für Migrationsszenarien umgestellt haben, aktualisieren Sie die folgenden Speicher-VM-Konfigurationseinstellungen auf der Ziel-Speicher-VM.
@@ -265,6 +285,7 @@ Nachdem Sie die Replikation für Migrationsszenarien umgestellt haben, aktualisi
 
 
 
+[[related-information]]
 == Verwandte Informationen
 
 link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_wa-updates/change-tiering-policy.html["Die Tiering-Richtlinie ändern"] für das/die Ziel-Volume nach der Umstellung.

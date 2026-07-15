@@ -35,6 +35,7 @@ Ereignisaufbewahrung:: Ereignisse werden 30 Tage lang in der Benutzeroberfläche
 
 
 
+[[track-and-monitor-operations]]
 == Verfolgen und Überwachen von Vorgängen
 
 Verfolgen und überwachen Sie Vorgänge in der NetApp Console mit Tracker.
@@ -47,6 +48,7 @@ Verfolgen und überwachen Sie Vorgänge in der NetApp Console mit Tracker.
 
 
 
+[[view-api-request]]
 == API-Anforderung anzeigen
 
 Zeigen Sie die API-Anforderung in der Codebox für eine Aufgabe im Tracker an.
@@ -58,6 +60,7 @@ Zeigen Sie die API-Anforderung in der Codebox für eine Aufgabe im Tracker an.
 
 
 
+[[retry-a-failed-operation]]
 == Wiederholen Sie einen fehlgeschlagenen Vorgang
 
 Wiederholen Sie einen fehlgeschlagenen Vorgang in Tracker.  Durch die Wiederholung des fehlgeschlagenen Vorgangs wird eine neue Aufgabe gestartet, die Sie in Tracker überwachen können.
@@ -77,6 +80,7 @@ Der Vorgang wird erneut gestartet und erscheint als neue Aufgabe im Tracker.
 
 
 
+[[edit-and-retry-a-failed-operation]]
 == Bearbeiten und erneutes Ausführen eines fehlgeschlagenen Vorgangs
 
 Bearbeiten Sie die Parameter des fehlgeschlagenen Vorgangs und versuchen Sie den Vorgang außerhalb von Tracker erneut.

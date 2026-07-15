@@ -18,20 +18,31 @@ Erfahren Sie, was es Neues in FSx für ONTAP gibt.
 
 
 
+[[15-july-2026]]
+== 15. Juli 2026
+
+Nicht aufgelöste Direktive in <stdin> - include::.._whatsnew/2026-07-15.adoc[]
+
+
+
+[[01-march-2026]]
 == 01. März 2026
 
 
 
+[[netapp-console-agent-status-supported-for-fsx-for-ontap-file-systems]]
 === NetApp Console-Agentenstatus wird für FSx für ONTAP-Dateisysteme unterstützt
 
 NetApp Console zeigt jetzt den Console-Agentenstatus für FSx for ONTAP-Dateisysteme in Workloads an. Der Status gibt an, ob der Agent läuft und mit dem FSx for ONTAP-Dateisystem kommunizieren kann. Diese Information kann Ihnen helfen, Verbindungsprobleme zu beheben.
 
 
 
+[[16-february-2026]]
 == 16. Februar 2026
 
 
 
+[[support-for-storage-vm-migration]]
 === Unterstützung für die Migration von Storage-VMs
 
 NetApp Workload Factory unterstützt jetzt die Migration für Storage-VMs. Diese Funktion ermöglicht die Migration von ONTAP-Speichersystemdaten und -konfigurationen von lokalen ONTAP-Systemen oder FSx for ONTAP-Dateisystemen der ersten Generation auf FSx for ONTAP-Dateisysteme der zweiten Generation. Sie können Storage-VM-Daten und Konfigurationseinstellungen replizieren, um mit minimalen Ausfallzeiten und geringen Beeinträchtigungen für Benutzer und Anwendungen auf das neue Dateisystem zu migrieren.
@@ -40,10 +51,12 @@ Um diese Funktion zu nutzen, link:https://docs.netapp.com/us-en/storage-manageme
 
 
 
+[[09-february-2026]]
 == 09. Februar 2026
 
 
 
+[[support-for-replicating-data-between-cloud-volumes-ontap-and-fsx-for-ontap]]
 === Unterstützung für die Replikation von Daten zwischen Cloud Volumes ONTAP und FSx for ONTAP
 
 Die Datenreplikation ist jetzt zwischen einem Cloud Volumes ONTAP-System und einem FSx for ONTAP-Dateisystem über die NetApp Console verfügbar.
@@ -52,20 +65,24 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-replica
 
 
 
+[[17-november-2025]]
 == 17. November 2025
 
 
 
+[[system-manager-available-when-using-an-aws-lambda-link]]
 === System Manager verfügbar bei Verwendung eines AWS Lambda-Links
 
 Die ONTAP System Manager-Schnittstelle kann mit einer AWS Lambda-Verbindung verwendet werden, um erweiterte ONTAP Operationen durchzuführen. Dies bietet eine Alternative zur Verwendung eines Konsolenagenten mit System Manager für die direkte Verwaltung eines FSx for ONTAP -Dateisystems über die Konsole. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Erfahren Sie mehr über die Verwendung von Links für fortgeschrittene ONTAP Operationen."^]
 
 
 
+[[11-november-2025]]
 == 11. November 2025
 
 
 
+[[support-for-replication-between-on-premises-ontap-systems-and-fsx-for-ontap-file-systems]]
 === Unterstützung für die Replikation zwischen lokalen ONTAP Systemen und FSx für ONTAP Dateisystemen
 
 Die Datenreplikation zwischen einem lokalen ONTAP -System und einem FSx for ONTAP Dateisystem ist über die NetApp Console Systems-Seite möglich.
@@ -74,10 +91,12 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-
 
 
 
+[[06-october-2025]]
 == 06. Oktober 2025
 
 
 
+[[bluexp-is-now-netapp-console]]
 === BlueXP heißt jetzt NetApp Console
 
 Die NetApp Console basiert auf der verbesserten und neu strukturierten BlueXP -Grundlage und ermöglicht die zentrale Verwaltung von NetApp -Speicher und NetApp Data Services in On-Premises- und Cloud-Umgebungen auf Unternehmensniveau. Sie liefert Einblicke in Echtzeit, schnellere Arbeitsabläufe und eine vereinfachte Verwaltung mit hoher Sicherheit und Konformität.
@@ -86,10 +105,12 @@ Einzelheiten zu den Änderungen finden Sie imlink:https://docs.netapp.com/us-en/
 
 
 
+[[03-august-2025]]
 == 03. August 2025
 
 
 
+[[enhancements-to-replication-relationships-tab]]
 === Verbesserungen an der Registerkarte „Replikationsbeziehungen“
 
 Wir haben der Tabelle mit den Replikationsbeziehungen mehrere neue Spalten hinzugefügt, um Ihnen auf der Registerkarte *Replikationsbeziehungen* weitere Informationen zu Ihren Replikationsbeziehungen zu geben. Die Tabelle enthält jetzt die folgenden Spalten:
@@ -103,10 +124,12 @@ Wir haben der Tabelle mit den Replikationsbeziehungen mehrere neue Spalten hinzu
 
 
 
+[[14-july-2025]]
 == 14. Juli 2025
 
 
 
+[[support-for-replicating-data-between-two-fsx-for-ontap-file-systems]]
 === Unterstützung für die Replikation von Daten zwischen zwei FSx for ONTAP -Dateisystemen
 
 Die Datenreplikation ist jetzt zwischen zwei FSx for ONTAP Dateisystemen über die Leinwand in der BlueXP -Konsole verfügbar.
@@ -115,10 +138,12 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-
 
 
 
+[[29-june-2025]]
 == 29. Juni 2025
 
 
 
+[[credentials-update]]
 === Aktualisierung der Anmeldeinformationen
 
 Nachdem Sie Anmeldeinformationen und Berechtigungen für Ihr FSx for ONTAP -Dateisystem eingerichtet haben, werden Sie zur Seite „Anmeldeinformationen“ von BlueXP weitergeleitet.  Auf dieser Seite können Sie Ihre FSx for ONTAP -Anmeldeinformationen umbenennen oder entfernen.
@@ -127,16 +152,19 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/tas
 
 
 
+[[04-may-2025]]
 == 04. Mai 2025
 
 
 
+[[tracker-response-support]]
 === Tracker-Antwortunterstützung
 
 Tracker bietet jetzt API-Antworten, sodass Sie die REST-API-Ausgabe im Zusammenhang mit der Aufgabe sehen können.
 
 
 
+[[link-authentication-support-for-aws-secrets-manager]]
 === Link-Authentifizierungsunterstützung für AWS Secrets Manager
 
 Sie haben jetzt die Möglichkeit, Geheimnisse aus AWS Secrets Manager zur Authentifizierung von Links zu verwenden, sodass Sie keine in BlueXP Workloads gespeicherten Anmeldeinformationen verwenden müssen.
@@ -145,6 +173,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen 
 
 
 
+[[implement-best-practices-for-an-fsx-for-ontap-file-system]]
 === Implementieren Sie Best Practices für ein FSx for ONTAP -Dateisystem
 
 BlueXP Workloads bietet ein Dashboard, auf dem Sie den ordnungsgemäßen Status Ihrer Dateisystemkonfigurationen überprüfen können.  Sie können diese Analyse nutzen, um Best Practices für Ihre FSx for ONTAP -Dateisysteme zu implementieren.  Die Analyse der Dateisystemkonfiguration umfasst die folgenden Konfigurationen: SSD-Kapazitätsschwelle, geplante lokale Snapshots, geplante FSx für ONTAP -Backups, Daten-Tiering und Remote-Datenreplikation.
@@ -155,22 +184,26 @@ BlueXP Workloads bietet ein Dashboard, auf dem Sie den ordnungsgemäßen Status 
 
 
 
+[[well-architected-notification-for-file-system-issues]]
 === Gut strukturierte Benachrichtigung bei Dateisystemproblemen
 
 In der BlueXP Konsole zeigen FSx für ONTAP -Dateisysteme mit gut strukturierten Problemen jetzt eine Benachrichtigung im Canvas an, die angibt, wenn bei Dateisystemen Probleme auftreten, die behoben werden müssen.
 
 
 
+[[updated-permissions-terminology]]
 === Aktualisierte Berechtigungsterminologie
 
 In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.
 
 
 
+[[30-march-2025]]
 == 30. März 2025
 
 
 
+[[iamsimulatepermissionpolicy-permission-update]]
 === iam:SimulatePermissionPolicy-Berechtigungsaktualisierung
 
 Jetzt können Sie die `iam:SimulatePrincipalPolicy` Berechtigung von der BlueXP Konsole, wenn Sie zusätzliche AWS-Kontoanmeldeinformationen hinzufügen oder eine neue Workload-Funktion wie die GenAI-Workload hinzufügen.
@@ -179,10 +212,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[02-march-2025]]
 == 02. März 2025
 
 
 
+[[cloudshell-events-in-tracker]]
 === CloudShell-Ereignisse im Tracker
 
 Immer wenn Sie CloudShell verwenden, um FSx für ONTAP -Operationen von BlueXP -Workloads auszuführen, werden die Ereignisse im Tracker angezeigt.
@@ -191,10 +226,12 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-monitor
 
 
 
+[[02-february-2025]]
 == 02. Februar 2025
 
 
 
+[[associate-fsx-for-ontap-file-system-with-a-workspace-in-bluexp]]
 === Verknüpfen Sie das FSx for ONTAP -Dateisystem mit einem Arbeitsbereich in BlueXP
 
 Nach der BlueXP Integration im November 2024 waren neu erstellte FSx für ONTAP Dateisysteme nicht mit einem Arbeitsbereich in BlueXP verknüpft.  Wenn Sie jetzt FSx für ONTAP Dateisysteme erstellen oder entdecken, werden diese mit einem Arbeitsbereich innerhalb eines BlueXP Kontos verknüpft.
@@ -203,6 +240,7 @@ Wenn Sie über vorhandene FSx für ONTAP Dateisysteme verfügen, die keinem Arbe
 
 
 
+[[file-system-removal-from-bluexp-canvas]]
 === Dateisystementfernung aus der BlueXP Leinwand
 
 Sie können jetzt ein FSx für ONTAP Dateisystem aus einem Arbeitsbereich im BlueXP Canvas entfernen.  Dieser Vorgang trennt das Dateisystem von einem Arbeitsbereich, sodass Sie es mit einem anderen Arbeitsbereich innerhalb desselben BlueXP Kontos verknüpfen können.
@@ -211,6 +249,7 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-remove-
 
 
 
+[[tracker-available-for-monitoring-and-tracking-operations]]
 === Tracker für Überwachungs- und Verfolgungsvorgänge verfügbar
 
 Tracker, eine neue Überwachungsfunktion, ist in BlueXP Amazon FSx for NetApp ONTAP verfügbar.  Mit Tracker können Sie den Fortschritt und Status von Anmeldeinformationen, Speicher- und Linkvorgängen überwachen und verfolgen, Details zu Vorgangsaufgaben und Unteraufgaben überprüfen, Probleme oder Fehler diagnostizieren, Parameter für fehlgeschlagene Vorgänge bearbeiten und fehlgeschlagene Vorgänge wiederholen.
@@ -219,6 +258,7 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-monitor
 
 
 
+[[cloudshell-available-in-bluexp-workloads]]
 === CloudShell in BlueXP Workloads verfügbar
 
 CloudShell ist verfügbar, wenn Sie sich in BlueXP Workloads innerhalb der BlueXP Konsole befinden.  Mit CloudShell können Sie die AWS- und ONTAP Anmeldeinformationen verwenden, die Sie in Ihrem BlueXP Konto angegeben haben, und AWS CLI-Befehle oder ONTAP CLI-Befehle in einer Shell-ähnlichen Umgebung ausführen.
@@ -227,10 +267,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Ver
 
 
 
+[[06-january-2025]]
 == 06. Januar 2025
 
 
 
+[[netapp-releases-additional-cloudformation-resources]]
 === NetApp veröffentlicht zusätzliche CloudFormation-Ressourcen
 
 NetApp bietet jetzt CloudFormation-Ressourcen, mit denen Kunden erweiterte ONTAP Komponenten nutzen können, die nicht in der AWS-Konsole verfügbar sind.  CloudFormation ist der Infrastruktur-als-Code-Mechanismus für AWS.  Sie können Replikationsbeziehungen, CIFS-Freigaben, NFS-Exportrichtlinien, Snapshots und mehr erstellen.
@@ -239,10 +281,12 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-
 
 
 
+[[11-november-2024]]
 == 11. November 2024
 
 
 
+[[fsx-for-ontap-integrates-with-storage-in-bluexp-workload-factory]]
 === FSx für ONTAP integriert sich mit Storage in BlueXP Workload Factory
 
 FSx für ONTAP Dateisystemverwaltungsaufgaben wie das Hinzufügen von Volumes, die Erweiterung der Dateisystemkapazität und die Verwaltung von Speicher-VMs werden jetzt in der BlueXP workload factory verwaltet, einem neuen Service von NetApp und Amazon FSx for NetApp ONTAP.  Sie können Ihre vorhandenen Anmeldeinformationen und Berechtigungen wie bisher verwenden.  Der Unterschied besteht darin, dass Sie jetzt mit der BlueXP workload factory mehr Möglichkeiten zur Verwaltung Ihrer Dateisysteme haben.  Wenn Sie eine FSx für ONTAP Arbeitsumgebung aus der BlueXP Leinwand öffnen, gelangen Sie direkt zur BlueXP workload factory.
@@ -253,10 +297,12 @@ Wenn Sie nach der Option „Erweiterte Ansicht“ suchen, mit der Sie ein FSx f�
 
 
 
+[[30-july-2023]]
 == 30. Juli 2023
 
 
 
+[[support-for-three-additional-regions]]
 === Unterstützung für drei zusätzliche Regionen
 
 Kunden können jetzt Amazon FSx for NetApp ONTAP Dateisysteme in drei neuen AWS-Regionen erstellen: Europa (Zürich), Europa (Spanien) und Asien-Pazifik (Hyderabad).
@@ -265,98 +311,117 @@ Siehelink:https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-fsx-netapp-o
 
 
 
+[[02-july-2023]]
 == 02. Juli 2023
 
 
 
+[[add-a-storage-vm]]
 === Hinzufügen einer Speicher-VM
 
 Sie können jetzt mit BlueXP eine Speicher-VM zum Amazon FSx for NetApp ONTAP Dateisystem hinzufügen.
 
 
 
+[[my-opportunities-tab-is-now-my-estate]]
 === Die Registerkarte **Meine Möglichkeiten** heißt jetzt **Mein Nachlass**
 
 Die Registerkarte **Meine Möglichkeiten** heißt jetzt **Mein Nachlass**.  Die Dokumentation wird aktualisiert, um den neuen Namen widerzuspiegeln.
 
 
 
+[[04-june-2023]]
 == 04. Juni 2023
 
 
 
+[[maintenance-window-start-time]]
 === Startzeit des Wartungsfensters
 
 Wannlink:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html["Schaffung einer Arbeitsumgebung"] können Sie die Startzeit für das wöchentliche 30-minütige Wartungsfenster angeben, um sicherzustellen, dass die Wartung nicht mit kritischen Geschäftsaktivitäten kollidiert.
 
 
 
+[[distribute-volume-data-using-flexgroups]]
 === Verteilen Sie Volumendaten mit FlexGroups
 
 Beim Erstellen eines Volumes können Sie die Datenoptimierung aktivieren, indem Sie eine FlexGroup erstellen, um Daten auf die Volumes zu verteilen.
 
 
 
+[[07-may-2023]]
 == 07. Mai 2023
 
 
 
+[[generate-a-security-group]]
 === Erstellen einer Sicherheitsgruppe
 
 Beim Erstellen einer Arbeitsumgebung können Sie jetzt BlueXPlink:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html["eine Sicherheitsgruppe generieren"] das nur Datenverkehr innerhalb der ausgewählten VPC zulässt.  Diese Funktionlink:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["erfordert zusätzliche Berechtigungen"] .
 
 
 
+[[add-or-modify-tags]]
 === Tags hinzufügen oder ändern
 
 Sie können optional Tags hinzufügen und ändern, um Datenträger zu kategorisieren.
 
 
 
+[[02-april-2023]]
 == 02. April 2023
 
 
 
+[[increase-in-iops-limit]]
 === Erhöhung des IOPS-Limits
 
 Das IOPS-Limit wird erhöht, um eine manuelle oder automatische Bereitstellung von bis zu 160.000 zu ermöglichen.
 
 
 
+[[05-march-2023]]
 == 05. März 2023
 
 
 
+[[user-interface-enhanced]]
 === Benutzeroberfläche verbessert
 
 Es wurden Verbesserungen an der Benutzeroberfläche vorgenommen und Screenshots in der Dokumentation aktualisiert.
 
 
 
+[[01-january-2023]]
 == 01. Januar 2023
 
 
 
+[[automatic-capacity-management]]
 === Automatisches Kapazitätsmanagement
 
 Sie können nun Folgendes aktivieren:link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html["automatisches Kapazitätsmanagement"] um je nach Bedarf inkrementellen Speicher hinzuzufügen. Die automatische Kapazitätsverwaltung fragt den Cluster in regelmäßigen Abständen ab, um den Bedarf zu ermitteln, und erhöht die Speicherkapazität automatisch in Schritten von 10 % bis auf 80 % der maximalen Kapazität des Clusters.
 
 
 
+[[18-september-2022]]
 == 18. September 2022
 
 
 
+[[change-storage-capacity-and-iops]]
 === Speicherkapazität und IOPS ändern
 
 Sie können jetztlink:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html["Ändern Sie die Speicherkapazität und IOPS"] jederzeit, nachdem Sie die FSx for ONTAP Arbeitsumgebung erstellt haben.
 
 
 
+[[31-july-2022]]
 == 31. Juli 2022
 
 
 
+[[my-estate-feature]]
 === *Mein Nachlass*-Funktion
 
 Wenn Sie Ihre AWS-Anmeldeinformationen zuvor an Cloud Manager übermittelt haben, kann die neue Funktion *My estate* automatisch FSx for ONTAP -Dateisysteme erkennen und vorschlagen, die mit Cloud Manager hinzugefügt und verwaltet werden können.  Sie können die verfügbaren Datendienste auch über die Registerkarte *Mein Nachlass* überprüfen.
@@ -365,28 +430,33 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-
 
 
 
+[[change-throughput-capacity]]
 === Durchsatzkapazität ändern
 
 Sie können jetztlink:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html["Durchsatzkapazität ändern"] jederzeit, nachdem Sie die FSx for ONTAP Arbeitsumgebung erstellt haben.
 
 
 
+[[replicate-and-sync-data]]
 === Daten replizieren und synchronisieren
 
 Sie können jetzt Daten mit FSx for ONTAP als Quelle auf lokale und andere FSx for ONTAP -Systeme replizieren und synchronisieren.
 
 
 
+[[create-iscsi-volume]]
 === iSCSI-Volume erstellen
 
 Sie können jetzt mit Cloud Manager iSCSI-Volumes in FSx für ONTAP erstellen.
 
 
 
+[[3-july-2022]]
 == 3. Juli 2022
 
 
 
+[[support-for-single-or-multiple-availability-zon]]
 === Unterstützung für einzelne oder mehrere Availability Zones
 
 Sie können jetzt ein HA-Bereitstellungsmodell mit einer oder mehreren Availability Zones auswählen.
@@ -395,6 +465,7 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-
 
 
 
+[[support-for-govcloud-account-authentication]]
 === Unterstützung für die GovCloud-Kontoauthentifizierung
 
 Die AWS GovCloud-Kontoauthentifizierung wird jetzt in Cloud Manager unterstützt.
@@ -403,10 +474,12 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/tas
 
 
 
+[[27-february-2022]]
 == 27. Februar 2022
 
 
 
+[[assume-iam-role]]
 === IAM-Rolle übernehmen
 
 Wenn Sie eine FSx für ONTAP Arbeitsumgebung erstellen, müssen Sie jetzt die ARN einer IAM-Rolle angeben, die Cloud Manager übernehmen kann, um eine FSx für ONTAP Arbeitsumgebung zu erstellen.  Zuvor mussten Sie AWS-Zugriffsschlüssel angeben.
@@ -415,42 +488,50 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/tas
 
 
 
+[[31-october-2021]]
 == 31. Oktober 2021
 
 
 
+[[create-iscsi-volumes-using-cloud-manager-api]]
 === Erstellen Sie iSCSI-Volumes mit der Cloud Manager-API
 
 Sie können mithilfe der Cloud Manager-API iSCSI-Volumes für FSx for ONTAP erstellen und in Ihrer Arbeitsumgebung verwalten.
 
 
 
+[[select-volume-units-when-creating-volumes]]
 === Wählen Sie beim Erstellen von Volumes Volumeneinheiten aus
 
 Sie können Volume-Einheiten (GiB oder TiB) auswählen, wenn Sie Volumes in FSx für ONTAP erstellen.
 
 
 
+[[4-october-2021]]
 == 4. Oktober 2021
 
 
 
+[[create-cifs-volumes-using-cloud-manager]]
 === Erstellen Sie CIFS-Volumes mit Cloud Manager
 
 Jetzt können Sie mit Cloud Manager CIFS-Volumes in FSx für ONTAP erstellen.
 
 
 
+[[edit-volumes-using-cloud-manager]]
 === Bearbeiten von Volumes mit Cloud Manager
 
 Jetzt können Sie FSx für ONTAP -Volumes mit Cloud Manager bearbeiten.
 
 
 
+[[2-september-2021]]
 == 2. September 2021
 
 
 
+[[support-for-amazon-fsx-for-netapp-ontap]]
 === Unterstützung für Amazon FSx for NetApp ONTAP
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSx for NetApp ONTAP"^]ist ein vollständig verwalteter Dienst, der es Kunden ermöglicht, Dateisysteme zu starten und auszuführen, die auf dem ONTAP Speicherbetriebssystem von NetApp basieren.  FSx für ONTAP bietet dieselben Funktionen, dieselbe Leistung und dieselben Verwaltungsfunktionen, die NetApp Kunden vor Ort nutzen, mit der Einfachheit, Agilität, Sicherheit und Skalierbarkeit eines nativen AWS-Dienstes.

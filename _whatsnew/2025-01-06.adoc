@@ -4,6 +4,7 @@
 
 
 
+[[netapp-releases-additional-cloudformation-resources]]
 === NetApp veröffentlicht zusätzliche CloudFormation-Ressourcen
 
 NetApp bietet jetzt CloudFormation-Ressourcen, mit denen Kunden erweiterte ONTAP Komponenten nutzen können, die nicht in der AWS-Konsole verfügbar sind.  CloudFormation ist der Infrastruktur-als-Code-Mechanismus für AWS.  Sie können Replikationsbeziehungen, CIFS-Freigaben, NFS-Exportrichtlinien, Snapshots und mehr erstellen.

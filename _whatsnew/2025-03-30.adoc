@@ -4,6 +4,7 @@
 
 
 
+[[iamsimulatepermissionpolicy-permission-update]]
 === iam:SimulatePermissionPolicy-Berechtigungsaktualisierung
 
 Jetzt können Sie die `iam:SimulatePrincipalPolicy` Berechtigung von der BlueXP Konsole, wenn Sie zusätzliche AWS-Kontoanmeldeinformationen hinzufügen oder eine neue Workload-Funktion wie die GenAI-Workload hinzufügen.

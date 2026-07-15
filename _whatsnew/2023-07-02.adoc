@@ -4,12 +4,14 @@
 
 
 
+[[add-a-storage-vm]]
 === Hinzufügen einer Speicher-VM
 
 Sie können jetzt mit BlueXP eine Speicher-VM zum Amazon FSx for NetApp ONTAP Dateisystem hinzufügen.
 
 
 
+[[my-opportunities-tab-is-now-my-estate]]
 === Die Registerkarte **Meine Möglichkeiten** heißt jetzt **Mein Nachlass**
 
 Die Registerkarte **Meine Möglichkeiten** heißt jetzt **Mein Nachlass**.  Die Dokumentation wird aktualisiert, um den neuen Namen widerzuspiegeln.

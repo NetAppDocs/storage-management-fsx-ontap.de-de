@@ -18,6 +18,7 @@ Um ein FSx for ONTAP Dateisystem zu erstellen oder zu verwalten, müssen Sie AWS
 
 
 
+[[why-aws-credentials-are-required]]
 == Warum AWS-Anmeldeinformationen erforderlich sind
 
 AWS-Anmeldeinformationen sind erforderlich, um FSx for ONTAP-Systeme über die NetApp Console zu erstellen und zu verwalten. Sie können neue Anmeldeinformationen erstellen oder sie einer bestehenden Organisation hinzufügen. Anmeldeinformationen ermöglichen es Ihnen, AWS-Ressourcen über die NetApp Console zu verwalten.
@@ -26,6 +27,7 @@ Anmeldedaten und Berechtigungen werden von NetApp Workload Factory verwaltet. Wo
 
 
 
+[[about-this-task]]
 == Informationen zu diesem Vorgang
 
 Beim Hinzufügen neuer Anmeldeinformationen für FSx for ONTAP aus dem Speicher in Workload Factory müssen Sie entscheiden, welche Berechtigungsrichtlinien Sie erteilen möchten.  Um AWS-Ressourcen wie FSx for ONTAP Dateisysteme zu ermitteln, benötigen Sie die Berechtigungen _view, planning und analysis_.  Für die Bereitstellung von FSx für ONTAP Dateisysteme benötigen Sie Berechtigungen zum Erstellen und Löschen von Dateisystemen.  Grundlegende Operationen für FSx für ONTAP können ohne Berechtigungen durchgeführt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Erfahren Sie mehr über Berechtigungen"].
@@ -42,6 +44,7 @@ Sie können Anmeldeinformationen mit zwei Methoden hinzufügen:
 
 
 
+[[add-credentials-to-an-account-manually]]
 == Anmeldeinformationen manuell zu einem Konto hinzufügen
 
 Sie können AWS-Anmeldeinformationen manuell zur NetApp Console hinzufügen, um Ihrem Konto die Berechtigungen für die Verwaltung der gewünschten Workload-Managementfunktionen sowie eine Ihrem Konto zugewiesene IAM-Rolle zu geben.
@@ -67,6 +70,7 @@ Sie benötigen Anmeldeinformationen, um sich bei Ihrem AWS-Konto anzumelden.
 
 
 
+[[step-1-select-the-storage-capability-and-create-the-iam-policy]]
 === Schritt 1: Speicherkapazität auswählen und IAM-Richtlinie erstellen
 
 In diesem Abschnitt wählen Sie die Speicherfunktion aus, die mit diesen Anmeldeinformationen verwaltet werden soll, sowie die Berechtigungen für den Speicher. Sie haben außerdem die Möglichkeit, weitere Workloads wie Datenbanken, GenAI oder VMware auszuwählen. Nachdem Sie Ihre Auswahl getroffen haben, müssen Sie die Richtlinienberechtigungen für jede ausgewählte Workload aus der Codebox kopieren und in der AWS Management Console innerhalb Ihres AWS-Kontos hinzufügen, um die Richtlinien zu erstellen.
@@ -88,6 +92,7 @@ Sie können später zusätzliche Funktionen hinzufügen. Wählen Sie einfach die
 
 
 
+[[step-2-create-the-iam-role-that-uses-the-policies]]
 === Schritt 2: Erstellen Sie die IAM-Rolle, die die Richtlinien verwendet
 
 In diesem Abschnitt richten Sie eine IAM-Rolle ein, die von Workload Factory übernommen wird und die die gerade erstellten Berechtigungen und Richtlinien umfasst.
@@ -109,6 +114,7 @@ In diesem Abschnitt richten Sie eine IAM-Rolle ein, die von Workload Factory üb
 
 
 
+[[step-3-enter-a-name-and-add-the-credentials]]
 === Schritt 3: Geben Sie einen Namen ein und fügen Sie die Anmeldeinformationen hinzu
 
 Im letzten Schritt muss ein Name für die Zugangsdaten eingegeben werden.
@@ -124,6 +130,7 @@ Die Konsole erstellt die Anmeldeinformationen und zeigt sie auf der Seite „Anm
 
 
 
+[[add-credentials-to-an-account-using-cloudformation]]
 == Fügen Sie mithilfe von CloudFormation Anmeldeinformationen zu einem Konto hinzu
 
 Sie können AWS-Anmeldeinformationen zur NetApp Workload Factory hinzufügen, indem Sie einen AWS CloudFormation Stack verwenden, indem Sie die gewünschten Workload-Funktionen auswählen und dann den AWS CloudFormation Stack in Ihrem AWS-Konto starten. CloudFormation erstellt die IAM-Richtlinien und die IAM-Rolle basierend auf den von Ihnen ausgewählten Workload-Funktionen.

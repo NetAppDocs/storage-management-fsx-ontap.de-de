@@ -4,6 +4,7 @@
 
 
 
+[[enhancements-to-replication-relationships-tab]]
 === Verbesserungen an der Registerkarte „Replikationsbeziehungen“
 
 Wir haben der Tabelle mit den Replikationsbeziehungen mehrere neue Spalten hinzugefügt, um Ihnen auf der Registerkarte *Replikationsbeziehungen* weitere Informationen zu Ihren Replikationsbeziehungen zu geben. Die Tabelle enthält jetzt die folgenden Spalten:

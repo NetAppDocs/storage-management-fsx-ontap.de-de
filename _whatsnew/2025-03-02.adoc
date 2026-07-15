@@ -4,6 +4,7 @@
 
 
 
+[[cloudshell-events-in-tracker]]
 === CloudShell-Ereignisse im Tracker
 
 Immer wenn Sie CloudShell verwenden, um FSx für ONTAP -Operationen von BlueXP -Workloads auszuführen, werden die Ereignisse im Tracker angezeigt.
